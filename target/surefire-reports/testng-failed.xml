@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [test]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="env" value="test"/>
+  <listeners>
+    <listener class-name="com.org.yaapita.YaapitaListener"/>
+  </listeners>
+  <test thread-count="5" name="testng(failed)" verbose="0">
+    <classes>
+      <class name="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable">
+        <methods>
+          <include name="validateGetAmtItems_pageable_TC001" invocation-numbers="1"/>
+          <include name="validateGetAmtItems_pageOffset_blankspaces_TC005"/>
+          <include name="testFinish"/>
+          <include name="suiteSetup"/>
+          <include name="validateGetAmtItems_pageOffset_empty_TC006"/>
+          <include name="classSetup"/>
+          <include name="validateGetAmtItems_pageOffset_TC003" invocation-numbers="0 1 2 3 4"/>
+        </methods>
+      </class> <!-- com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable -->
+    </classes>
+  </test> <!-- testng(failed) -->
+</suite> <!-- Failed suite [test] -->

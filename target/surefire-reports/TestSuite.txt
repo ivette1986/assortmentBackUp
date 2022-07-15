@@ -1,0 +1,39 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 234.107 s <<< FAILURE! - in TestSuite
+com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_TC003[{Test Case=GetAssormentItems filter by pageable=true and page.offset= 5, paramPageSize=10, S.No=1, ExecutionFlag=Y, filterParam=5, StatusCode=200}](1)  Time elapsed: 4.544 s  <<< FAILURE!
+java.lang.AssertionError:  [Error] Assortment Items according to offset 5 and page.size 10 were NOT correctly fetched expected [true] but found [false]
+	at com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_TC003(GetAssortmentItemsPageable.java:158)
+
+com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_TC003[{Test Case=GetAssormentItems filter by pageable=true and page.offset= 6, paramPageSize=20, S.No=2, ExecutionFlag=Y, filterParam=6, StatusCode=200}](2)  Time elapsed: 4.194 s  <<< FAILURE!
+java.lang.AssertionError:  [Error] Assortment Items according to offset 6 and page.size 20 were NOT correctly fetched expected [true] but found [false]
+	at com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_TC003(GetAssortmentItemsPageable.java:158)
+
+com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_TC003[{Test Case=GetAssormentItems filter by pageable=true and page.offset= 35, paramPageSize=30, S.No=3, ExecutionFlag=Y, filterParam=35, StatusCode=200}](3)  Time elapsed: 4.152 s  <<< FAILURE!
+java.lang.AssertionError:  [Error] Assortment Items according to offset 35 and page.size 30 were NOT correctly fetched expected [true] but found [false]
+	at com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_TC003(GetAssortmentItemsPageable.java:158)
+
+com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_TC003[{Test Case=GetAssormentItems filter by pageable=true and page.offset= 72, paramPageSize=40, S.No=4, ExecutionFlag=Y, filterParam=72, StatusCode=200}](4)  Time elapsed: 4.38 s  <<< FAILURE!
+java.lang.AssertionError:  [Error] Assortment Items according to offset 72 and page.size 40 were NOT correctly fetched expected [true] but found [false]
+	at com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_TC003(GetAssortmentItemsPageable.java:158)
+
+com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_TC003[{Test Case=GetAssormentItems filter by pageable=true and page.offset= 0, paramPageSize=50, S.No=5, ExecutionFlag=Y, filterParam=0, StatusCode=200}](5)  Time elapsed: 4.332 s  <<< FAILURE!
+java.lang.AssertionError:  [Error] Assortment Items according to offset 0 and page.size 50 were NOT correctly fetched expected [true] but found [false]
+	at com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_TC003(GetAssortmentItemsPageable.java:158)
+
+com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_blankspaces_TC005  Time elapsed: 4.494 s  <<< FAILURE!
+java.lang.AssertionError:  [Error] Assortment Items according to offset 0 and page.size 70 were NOT correctly fetched expected [true] but found [false]
+	at com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_blankspaces_TC005(GetAssortmentItemsPageable.java:230)
+
+com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_empty_TC006  Time elapsed: 4.433 s  <<< FAILURE!
+java.lang.AssertionError:  [Error] Assortment Items according to offset 0 and page.size 60 were NOT correctly fetched expected [true] but found [false]
+	at com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_empty_TC006(GetAssortmentItemsPageable.java:267)
+
+com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageable_TC001[{Test Case=GET Assortment Items Pageable = false, S.No=2, ExecutionFlag=Y, filterParam=false, StatusCode=200}](2)  Time elapsed: 181.355 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected content-type "JSON" doesn't match actual content-type "text/html".
+
+	at com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageable_TC001(GetAssortmentItemsPageable.java:69)
+

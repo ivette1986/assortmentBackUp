@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="test" verbose="2">
+    <parameter name="env" value="${env}"/>
+    <listeners>
+        <listener class-name="com.org.yaapita.YaapitaListener"/>
+    </listeners>
+    <test preserve-order="true" name="testng"  thread-count="1">
+        <classes>
+            <class name="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="234.107" tests="16" errors="0" skipped="0" failures="8">
+  <properties>
+    <property name="socksProxyHost" value="127.0.0.1"/>
+    <property name="yaapita_user" value="DOU7132"/>
+    <property name="java.specification.version" value="18"/>
+    <property name="yaapita_retryLimit" value="0"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="yaapita_ApplicationName" value="assortment-backend-atf"/>
+    <property name="excel_data_path_products" value="/src/test/resources/inputData/getProducts/"/>
+    <property name="ExecutionFlag" value="Y"/>
+    <property name="yaapita_DateToday" value="2022-07-14"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="application_name" value="amtApp"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="LOGIN_CLIENT_SECRET" value="R)okw*Xgv-oi#6D#7Fhn_(gZ@r9HB&gt;b2b?A{"/>
+    <property name="GET_ASSORTMENT_ITEMS" value="/assortment-items"/>
+    <property name="execStart1" value="1657834018296"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-18.jdk/Contents/Home/lib"/>
+    <property name="TestName" value="validateGetAmtItems_pageable_TC001"/>
+    <property name="sun.java.command" value="/Users/DOU7132/Workspaces/assortment-backend-atf/target/surefire/surefirebooter11272746410547417698.jar /Users/DOU7132/Workspaces/assortment-backend-atf/target/surefire 2022-07-14T16-26-55_457-jvmRun1 surefire12988357884991717137tmp surefire_010224727553008215tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-03-22"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-18.jdk/Contents/Home"/>
+    <property name="basedir" value="/Users/DOU7132/Workspaces/assortment-backend-atf"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="extentReportPath" value="/Users/DOU7132/Workspaces/assortment-backend-atf/out/SoaTestReports/yaAPIta_assortment-backend-atf.html"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="18+36-2087"/>
+    <property name="excel_data_path" value="/src/test/resources/inputData/getItems/"/>
+    <property name="user.name" value="DOU7132"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="ASSORTMENT_REPORTS_STORE_PICKS" value="/reports/store-picks"/>
+    <property name="paramPageSize" value="50"/>
+    <property name="localRepository" value="/Users/DOU7132/.m2/repository"/>
+    <property name="currentYaapitaVersion" value="458cfc1828c2e38a939a754695d6f7fa02912b4f"/>
+    <property name="java.io.tmpdir" value="/var/folders/v2/ng8tw7js17b408d7fcm_yz940000gp/T/"/>
+    <property name="java.version" value="18"/>
+    <property name="yaapita_testRunCounter" value="0"/>
+    <property name="socksProxyPort" value="3129"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="totalTests" value="16"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="Test Case" value="GET Assortment Items Pageable = true"/>
+    <property name="java.library.path" value="/Users/DOU7132/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="GET_PRODUCTS" value="/products"/>
+    <property name="LOGIN_TENANT_ID" value="8331e14a-9134-4288-bf5a-5e2c8412f074"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="S.No" value="3"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|vpn-hdc.kroger.com|*.vpn-hdc.kroger.com|vpn-cdc.kroger.com|*.vpn-cdc.kroger.com|pulseE31.kroger.com|*.pulseE31.kroger.com"/>
+    <property name="db" value="DBtest"/>
+    <property name="ASSORTMENT_HOST" value="https://assortment-manager-core.amtapp-test.kpsazc.dgtl.kroger.com"/>
+    <property name="http.proxyHost" value="127.0.0.1"/>
+    <property name="LOGIN_CLIENT_ID" value="4b6ce87b-a260-4f9e-a981-b70a044420db"/>
+    <property name="yaapita_DateTomorrow" value="2022-07-15"/>
+    <property name="yaapita_latestchange" value="LATEST CHANGE :: April 16 - Added ability to add custom background color for reporting"/>
+    <property name="java.class.path" value="/Users/DOU7132/Workspaces/assortment-backend-atf/target/test-classes:/Users/DOU7132/Workspaces/assortment-backend-atf/target/classes:/Users/DOU7132/.m2/repository/com/org/yaapita/yaapita/3.0.0/yaapita-3.0.0.jar:/Users/DOU7132/.m2/repository/com/aventstack/extentreports/3.1.3/extentreports-3.1.3.jar:/Users/DOU7132/.m2/repository/org/freemarker/freemarker/2.3.23/freemarker-2.3.23.jar:/Users/DOU7132/.m2/repository/org/mongodb/mongodb-driver/3.3.0/mongodb-driver-3.3.0.jar:/Users/DOU7132/.m2/repository/org/mongodb/bson/3.3.0/bson-3.3.0.jar:/Users/DOU7132/.m2/repository/org/mongodb/mongodb-driver-core/3.3.0/mongodb-driver-core-3.3.0.jar:/Users/DOU7132/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar:/Users/DOU7132/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.10/jackson-core-2.9.10.jar:/Users/DOU7132/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.10/jackson-databind-2.9.10.jar:/Users/DOU7132/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.10/jackson-annotations-2.9.10.jar:/Users/DOU7132/.m2/repository/com/google/guava/guava/28.1-jre/guava-28.1-jre.jar:/Users/DOU7132/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/DOU7132/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/DOU7132/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/DOU7132/.m2/repository/org/checkerframework/checker-qual/2.8.1/checker-qual-2.8.1.jar:/Users/DOU7132/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.2/error_prone_annotations-2.3.2.jar:/Users/DOU7132/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/Users/DOU7132/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.18/animal-sniffer-annotations-1.18.jar:/Users/DOU7132/.m2/repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar:/Users/DOU7132/.m2/repository/org/apache/poi/poi-ooxml/4.1.0/poi-ooxml-4.1.0.jar:/Users/DOU7132/.m2/repository/org/apache/poi/poi-ooxml-schemas/4.1.0/poi-ooxml-schemas-4.1.0.jar:/Users/DOU7132/.m2/repository/org/apache/xmlbeans/xmlbeans/3.1.0/xmlbeans-3.1.0.jar:/Users/DOU7132/.m2/repository/org/apache/commons/commons-compress/1.18/commons-compress-1.18.jar:/Users/DOU7132/.m2/repository/com/github/virtuald/curvesapi/1.06/curvesapi-1.06.jar:/Users/DOU7132/.m2/repository/org/apache/poi/poi/4.1.0/poi-4.1.0.jar:/Users/DOU7132/.m2/repository/commons-codec/commons-codec/1.12/commons-codec-1.12.jar:/Users/DOU7132/.m2/repository/org/apache/commons/commons-collections4/4.3/commons-collections4-4.3.jar:/Users/DOU7132/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/DOU7132/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/5.4.2.201908231537-r/org.eclipse.jgit-5.4.2.201908231537-r.jar:/Users/DOU7132/.m2/repository/com/jcraft/jsch/0.1.55/jsch-0.1.55.jar:/Users/DOU7132/.m2/repository/com/jcraft/jzlib/1.1.1/jzlib-1.1.1.jar:/Users/DOU7132/.m2/repository/com/googlecode/javaewah/JavaEWAH/1.1.6/JavaEWAH-1.1.6.jar:/Users/DOU7132/.m2/repository/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar:/Users/DOU7132/.m2/repository/org/bouncycastle/bcpg-jdk15on/1.61/bcpg-jdk15on-1.61.jar:/Users/DOU7132/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.61/bcprov-jdk15on-1.61.jar:/Users/DOU7132/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.61/bcpkix-jdk15on-1.61.jar:/Users/DOU7132/.m2/repository/org/json/json/20140107/json-20140107.jar:/Users/DOU7132/.m2/repository/org/jsoup/jsoup/1.11.1/jsoup-1.11.1.jar:/Users/DOU7132/.m2/repository/org/testng/testng/6.14.2/testng-6.14.2.jar:/Users/DOU7132/.m2/repository/com/beust/jcommander/1.72/jcommander-1.72.jar:/Users/DOU7132/.m2/repository/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar:/Users/DOU7132/.m2/repository/com/org/yaapita/lib-api-rest-helper/2.0.0/lib-api-rest-helper-2.0.0.jar:/Users/DOU7132/.m2/repository/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar:/Users/DOU7132/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/DOU7132/.m2/repository/com/org/yaapita/lib-yaapita-kroger-utils/2.1.0/lib-yaapita-kroger-utils-2.1.0.jar:/Users/DOU7132/.m2/repository/com/org/yaapita/lib-yaapita-reporting/3.0.0/lib-yaapita-reporting-3.0.0.jar:/Users/DOU7132/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.9.0/jackson-jaxrs-json-provider-2.9.0.jar:/Users/DOU7132/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.9.0/jackson-jaxrs-base-2.9.0.jar:/Users/DOU7132/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.9.0/jackson-module-jaxb-annotations-2.9.0.jar:/Users/DOU7132/.m2/repository/com/org/yaapita/lib-parse-files/2.0.0/lib-parse-files-2.0.0.jar:/Users/DOU7132/.m2/repository/com/org/yaapita/lib-db-util/3.0.0/lib-db-util-3.0.0.jar:/Users/DOU7132/.m2/repository/com/datastax/cassandra/cassandra-driver-core/3.6.0/cassandra-driver-core-3.6.0.jar:/Users/DOU7132/.m2/repository/io/netty/netty-handler/4.0.56.Final/netty-handler-4.0.56.Final.jar:/Users/DOU7132/.m2/repository/io/netty/netty-buffer/4.0.56.Final/netty-buffer-4.0.56.Final.jar:/Users/DOU7132/.m2/repository/io/netty/netty-codec/4.0.56.Final/netty-codec-4.0.56.Final.jar:/Users/DOU7132/.m2/repository/io/dropwizard/metrics/metrics-core/3.2.2/metrics-core-3.2.2.jar:/Users/DOU7132/.m2/repository/com/github/jnr/jnr-ffi/2.1.7/jnr-ffi-2.1.7.jar:/Users/DOU7132/.m2/repository/com/github/jnr/jffi/1.2.16/jffi-1.2.16.jar:/Users/DOU7132/.m2/repository/com/github/jnr/jffi/1.2.16/jffi-1.2.16-native.jar:/Users/DOU7132/.m2/repository/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar:/Users/DOU7132/.m2/repository/org/ow2/asm/asm-commons/5.0.3/asm-commons-5.0.3.jar:/Users/DOU7132/.m2/repository/org/ow2/asm/asm-analysis/5.0.3/asm-analysis-5.0.3.jar:/Users/DOU7132/.m2/repository/org/ow2/asm/asm-tree/5.0.3/asm-tree-5.0.3.jar:/Users/DOU7132/.m2/repository/org/ow2/asm/asm-util/5.0.3/asm-util-5.0.3.jar:/Users/DOU7132/.m2/repository/com/github/jnr/jnr-x86asm/1.0.2/jnr-x86asm-1.0.2.jar:/Users/DOU7132/.m2/repository/com/github/jnr/jnr-posix/3.0.44/jnr-posix-3.0.44.jar:/Users/DOU7132/.m2/repository/com/github/jnr/jnr-constants/0.9.9/jnr-constants-0.9.9.jar:/Users/DOU7132/.m2/repository/com/datastax/cassandra/cassandra-driver-mapping/3.6.0/cassandra-driver-mapping-3.6.0.jar:/Users/DOU7132/.m2/repository/com/datastax/cassandra/cassandra-driver-extras/3.6.0/cassandra-driver-extras-3.6.0.jar:/Users/DOU7132/.m2/repository/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar:/Users/DOU7132/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/DOU7132/.m2/repository/com/microsoft/sqlserver/mssql-jdbc/6.1.0.jre7/mssql-jdbc-6.1.0.jre7.jar:/Users/DOU7132/.m2/repository/com/microsoft/azure/azure-keyvault/0.9.3/azure-keyvault-0.9.3.jar:/Users/DOU7132/.m2/repository/com/microsoft/azure/azure-core/0.9.3/azure-core-0.9.3.jar:/Users/DOU7132/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/DOU7132/.m2/repository/javax/mail/mail/1.4.5/mail-1.4.5.jar:/Users/DOU7132/.m2/repository/com/sun/jersey/jersey-client/1.13/jersey-client-1.13.jar:/Users/DOU7132/.m2/repository/com/sun/jersey/jersey-core/1.13/jersey-core-1.13.jar:/Users/DOU7132/.m2/repository/com/sun/jersey/jersey-json/1.13/jersey-json-1.13.jar:/Users/DOU7132/.m2/repository/org/codehaus/jettison/jettison/1.1/jettison-1.1.jar:/Users/DOU7132/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar:/Users/DOU7132/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.jar:/Users/DOU7132/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.jar:/Users/DOU7132/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/DOU7132/.m2/repository/com/microsoft/azure/adal4j/1.0.0/adal4j-1.0.0.jar:/Users/DOU7132/.m2/repository/com/nimbusds/oauth2-oidc-sdk/4.5/oauth2-oidc-sdk-4.5.jar:/Users/DOU7132/.m2/repository/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar:/Users/DOU7132/.m2/repository/net/minidev/json-smart/1.1.1/json-smart-1.1.1.jar:/Users/DOU7132/.m2/repository/com/nimbusds/lang-tag/1.4/lang-tag-1.4.jar:/Users/DOU7132/.m2/repository/com/nimbusds/nimbus-jose-jwt/3.1.2/nimbus-jose-jwt-3.1.2.jar:/Users/DOU7132/.m2/repository/net/sourceforge/jtds/jtds/1.2/jtds-1.2.jar:/Users/DOU7132/.m2/repository/com/oracle/ojdbc6/11.2.0.3/ojdbc6-11.2.0.3.jar:/Users/DOU7132/.m2/repository/db2/db2jcc4/10.1.1/db2jcc4-10.1.1.jar:/Users/DOU7132/.m2/repository/com/ibm/informix/jdbc/4.10.12/jdbc-4.10.12.jar:/Users/DOU7132/.m2/repository/org/netezza/nzjdbc/4.6/nzjdbc-4.6.jar:/Users/DOU7132/.m2/repository/org/neo4j/neo4j-jdbc-bolt/3.4.0/neo4j-jdbc-bolt-3.4.0.jar:/Users/DOU7132/.m2/repository/org/neo4j/driver/neo4j-java-driver/1.6.1/neo4j-java-driver-1.6.1.jar:/Users/DOU7132/.m2/repository/org/neo4j/neo4j-jdbc/3.4.0/neo4j-jdbc-3.4.0.jar:/Users/DOU7132/.m2/repository/com/microsoft/azure/azure-cosmosdb/2.6.9/azure-cosmosdb-2.6.9.jar:/Users/DOU7132/.m2/repository/com/microsoft/azure/azure-cosmosdb-commons/2.6.9/azure-cosmosdb-commons-2.6.9.jar:/Users/DOU7132/.m2/repository/com/microsoft/azure/azure-cosmosdb-gateway/2.6.9/azure-cosmosdb-gateway-2.6.9.jar:/Users/DOU7132/.m2/repository/com/microsoft/azure/azure-cosmosdb-direct/2.6.9/azure-cosmosdb-direct-2.6.9.jar:/Users/DOU7132/.m2/repository/com/fasterxml/uuid/java-uuid-generator/3.1.4/java-uuid-generator-3.1.4.jar:/Users/DOU7132/.m2/repository/commons-io/commons-io/2.5/commons-io-2.5.jar:/Users/DOU7132/.m2/repository/com/github/davidmoten/rxjava-extras/0.8.0.17/rxjava-extras-0.8.0.17.jar:/Users/DOU7132/.m2/repository/io/reactivex/rxjava/1.3.8/rxjava-1.3.8.jar:/Users/DOU7132/.m2/repository/io/reactivex/rxjava-string/1.1.1/rxjava-string-1.1.1.jar:/Users/DOU7132/.m2/repository/io/reactivex/rxnetty/0.4.20/rxnetty-0.4.20.jar:/Users/DOU7132/.m2/repository/io/netty/netty-codec-http/4.1.50.Final/netty-codec-http-4.1.50.Final.jar:/Users/DOU7132/.m2/repository/io/netty/netty-common/4.1.50.Final/netty-common-4.1.50.Final.jar:/Users/DOU7132/.m2/repository/io/netty/netty-transport/4.1.50.Final/netty-transport-4.1.50.Final.jar:/Users/DOU7132/.m2/repository/io/netty/netty-resolver/4.1.50.Final/netty-resolver-4.1.50.Final.jar:/Users/DOU7132/.m2/repository/com/azure/azure-cosmos/4.0.1/azure-cosmos-4.0.1.jar:/Users/DOU7132/.m2/repository/io/netty/netty-codec-http2/4.1.49.Final/netty-codec-http2-4.1.49.Final.jar:/Users/DOU7132/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.10.1/jackson-datatype-jsr310-2.10.1.jar:/Users/DOU7132/.m2/repository/io/netty/netty-transport-native-epoll/4.1.49.Final/netty-transport-native-epoll-4.1.49.Final-linux-x86_64.jar:/Users/DOU7132/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.49.Final/netty-transport-native-unix-common-4.1.49.Final.jar:/Users/DOU7132/.m2/repository/io/netty/netty-handler-proxy/4.1.49.Final/netty-handler-proxy-4.1.49.Final.jar:/Users/DOU7132/.m2/repository/io/netty/netty-codec-socks/4.1.49.Final/netty-codec-socks-4.1.49.Final.jar:/Users/DOU7132/.m2/repository/io/projectreactor/reactor-core/3.3.5.RELEASE/reactor-core-3.3.5.RELEASE.jar:/Users/DOU7132/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/Users/DOU7132/.m2/repository/com/azure/azure-core/1.5.1/azure-core-1.5.1.jar:/Users/DOU7132/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.10.1/jackson-dataformat-xml-2.10.1.jar:/Users/DOU7132/.m2/repository/org/codehaus/woodstox/stax2-api/4.2/stax2-api-4.2.jar:/Users/DOU7132/.m2/repository/com/fasterxml/woodstox/woodstox-core/6.0.2/woodstox-core-6.0.2.jar:/Users/DOU7132/.m2/repository/com/fasterxml/jackson/module/jackson-module-afterburner/2.10.1/jackson-module-afterburner-2.10.1.jar:/Users/DOU7132/.m2/repository/io/micrometer/micrometer-core/1.2.0/micrometer-core-1.2.0.jar:/Users/DOU7132/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.11/HdrHistogram-2.1.11.jar:/Users/DOU7132/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/Users/DOU7132/.m2/repository/io/projectreactor/netty/reactor-netty/0.9.7.RELEASE/reactor-netty-0.9.7.RELEASE.jar:/Users/DOU7132/.m2/repository/org/postgresql/postgresql/42.2.5/postgresql-42.2.5.jar:/Users/DOU7132/.m2/repository/com/org/yaapita/lib-load-input-data/2.0.0/lib-load-input-data-2.0.0.jar:/Users/DOU7132/.m2/repository/com/opencsv/opencsv/4.0/opencsv-4.0.jar:/Users/DOU7132/.m2/repository/org/apache/commons/commons-text/1.1/commons-text-1.1.jar:/Users/DOU7132/.m2/repository/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3.jar:/Users/DOU7132/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/DOU7132/.m2/repository/com/org/yaapita/libmq/2.0.0/libmq-2.0.0.jar:/Users/DOU7132/.m2/repository/com/kroger/eprn/thirdparty/ibm.mq.client/8.0.0.7/ibm.mq.client-8.0.0.7.jar:/Users/DOU7132/.m2/repository/javax/resource/connector/1.0/connector-1.0.jar:/Users/DOU7132/.m2/repository/com/org/yaapita/libkafka/2.0.0/libkafka-2.0.0.jar:/Users/DOU7132/.m2/repository/org/apache/kafka/kafka-clients/0.10.2.0/kafka-clients-0.10.2.0.jar:/Users/DOU7132/.m2/repository/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.jar:/Users/DOU7132/.m2/repository/org/xerial/snappy/snappy-java/1.1.2.6/snappy-java-1.1.2.6.jar:/Users/DOU7132/.m2/repository/org/springframework/spring-messaging/5.2.6.RELEASE/spring-messaging-5.2.6.RELEASE.jar:/Users/DOU7132/.m2/repository/org/springframework/spring-beans/5.2.6.RELEASE/spring-beans-5.2.6.RELEASE.jar:/Users/DOU7132/.m2/repository/org/springframework/spring-core/5.2.6.RELEASE/spring-core-5.2.6.RELEASE.jar:/Users/DOU7132/.m2/repository/org/springframework/spring-jcl/5.2.6.RELEASE/spring-jcl-5.2.6.RELEASE.jar:/Users/DOU7132/.m2/repository/org/springframework/kafka/spring-kafka/2.5.0.RELEASE/spring-kafka-2.5.0.RELEASE.jar:/Users/DOU7132/.m2/repository/org/springframework/spring-context/5.2.6.RELEASE/spring-context-5.2.6.RELEASE.jar:/Users/DOU7132/.m2/repository/org/springframework/spring-aop/5.2.6.RELEASE/spring-aop-5.2.6.RELEASE.jar:/Users/DOU7132/.m2/repository/org/springframework/spring-expression/5.2.6.RELEASE/spring-expression-5.2.6.RELEASE.jar:/Users/DOU7132/.m2/repository/org/springframework/spring-tx/5.2.6.RELEASE/spring-tx-5.2.6.RELEASE.jar:/Users/DOU7132/.m2/repository/org/springframework/retry/spring-retry/1.2.5.RELEASE/spring-retry-1.2.5.RELEASE.jar:/Users/DOU7132/.m2/repository/io/confluent/kafka-avro-serializer/5.3.0/kafka-avro-serializer-5.3.0.jar:/Users/DOU7132/.m2/repository/org/apache/avro/avro/1.8.1/avro-1.8.1.jar:/Users/DOU7132/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar:/Users/DOU7132/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar:/Users/DOU7132/.m2/repository/com/thoughtworks/paranamer/paranamer/2.7/paranamer-2.7.jar:/Users/DOU7132/.m2/repository/org/tukaani/xz/1.5/xz-1.5.jar:/Users/DOU7132/.m2/repository/io/confluent/kafka-schema-registry-client/5.3.0/kafka-schema-registry-client-5.3.0.jar:/Users/DOU7132/.m2/repository/io/confluent/common-config/5.3.0/common-config-5.3.0.jar:/Users/DOU7132/.m2/repository/io/confluent/common-utils/5.3.0/common-utils-5.3.0.jar:/Users/DOU7132/.m2/repository/org/apache/zookeeper/zookeeper/3.4.14/zookeeper-3.4.14.jar:/Users/DOU7132/.m2/repository/com/github/spotbugs/spotbugs-annotations/3.1.9/spotbugs-annotations-3.1.9.jar:/Users/DOU7132/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar:/Users/DOU7132/.m2/repository/org/apache/yetus/audience-annotations/0.5.0/audience-annotations-0.5.0.jar:/Users/DOU7132/.m2/repository/io/netty/netty/3.10.6.Final/netty-3.10.6.Final.jar:/Users/DOU7132/.m2/repository/com/101tec/zkclient/0.10/zkclient-0.10.jar:/Users/DOU7132/.m2/repository/com/org/yaapita/lib-wiremock-helper/2.0.0/lib-wiremock-helper-2.0.0.jar:/Users/DOU7132/.m2/repository/com/org/jsonxassert/jsonxassert/2.0.0/jsonxassert-2.0.0.jar:/Users/DOU7132/.m2/repository/io/rest-assured/rest-assured/4.3.3/rest-assured-4.3.3.jar:/Users/DOU7132/.m2/repository/org/codehaus/groovy/groovy/3.0.7/groovy-3.0.7.jar:/Users/DOU7132/.m2/repository/org/codehaus/groovy/groovy-xml/3.0.7/groovy-xml-3.0.7.jar:/Users/DOU7132/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/Users/DOU7132/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/Users/DOU7132/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/DOU7132/.m2/repository/org/apache/httpcomponents/httpmime/4.5.3/httpmime-4.5.3.jar:/Users/DOU7132/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/DOU7132/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/DOU7132/.m2/repository/io/rest-assured/json-path/4.3.3/json-path-4.3.3.jar:/Users/DOU7132/.m2/repository/org/codehaus/groovy/groovy-json/3.0.7/groovy-json-3.0.7.jar:/Users/DOU7132/.m2/repository/io/rest-assured/rest-assured-common/4.3.3/rest-assured-common-4.3.3.jar:/Users/DOU7132/.m2/repository/io/rest-assured/xml-path/4.3.3/xml-path-4.3.3.jar:/Users/DOU7132/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/Users/DOU7132/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/Users/DOU7132/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.3/jaxb-impl-2.3.3.jar:/Users/DOU7132/.m2/repository/io/rest-assured/json-schema-validator/3.3.0/json-schema-validator-3.3.0.jar:/Users/DOU7132/.m2/repository/com/github/java-json-tools/json-schema-validator/2.2.10/json-schema-validator-2.2.10.jar:/Users/DOU7132/.m2/repository/com/github/java-json-tools/json-schema-core/1.2.10/json-schema-core-1.2.10.jar:/Users/DOU7132/.m2/repository/com/github/java-json-tools/jackson-coreutils/1.9/jackson-coreutils-1.9.jar:/Users/DOU7132/.m2/repository/com/github/fge/msg-simple/1.1/msg-simple-1.1.jar:/Users/DOU7132/.m2/repository/com/github/fge/btf/1.2/btf-1.2.jar:/Users/DOU7132/.m2/repository/com/github/fge/uri-template/0.9/uri-template-0.9.jar:/Users/DOU7132/.m2/repository/org/mozilla/rhino/1.7.7.1/rhino-1.7.7.1.jar:/Users/DOU7132/.m2/repository/javax/mail/mailapi/1.4.3/mailapi-1.4.3.jar:/Users/DOU7132/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/Users/DOU7132/.m2/repository/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar:/Users/DOU7132/.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.0.0/libphonenumber-8.0.0.jar:/Users/DOU7132/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.3/jopt-simple-5.0.3.jar:/Users/DOU7132/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="https.proxyPort" value="3128"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="StatusCode" value="200"/>
+    <property name="user.timezone" value="America/Mexico_City"/>
+    <property name="LOGIN_GET_BEARER_TOKEN_URL" value="https://login.microsoftonline.com/{tenant_id}/oauth2/token"/>
+    <property name="suiteXmlFile" value="testng.xml"/>
+    <property name="java.vm.specification.version" value="18"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="MX"/>
+    <property name="LOGIN_RESOURCE" value="https://servicebus.azure.net"/>
+    <property name="Expected" value="[assortment items were not found during search]"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|vpn-hdc.kroger.com|*.vpn-hdc.kroger.com|vpn-cdc.kroger.com|*.vpn-cdc.kroger.com|pulseE31.kroger.com|*.pulseE31.kroger.com"/>
+    <property name="surefire.test.class.path" value="/Users/DOU7132/Workspaces/assortment-backend-atf/target/test-classes:/Users/DOU7132/Workspaces/assortment-backend-atf/target/classes:/Users/DOU7132/.m2/repository/com/org/yaapita/yaapita/3.0.0/yaapita-3.0.0.jar:/Users/DOU7132/.m2/repository/com/aventstack/extentreports/3.1.3/extentreports-3.1.3.jar:/Users/DOU7132/.m2/repository/org/freemarker/freemarker/2.3.23/freemarker-2.3.23.jar:/Users/DOU7132/.m2/repository/org/mongodb/mongodb-driver/3.3.0/mongodb-driver-3.3.0.jar:/Users/DOU7132/.m2/repository/org/mongodb/bson/3.3.0/bson-3.3.0.jar:/Users/DOU7132/.m2/repository/org/mongodb/mongodb-driver-core/3.3.0/mongodb-driver-core-3.3.0.jar:/Users/DOU7132/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar:/Users/DOU7132/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.10/jackson-core-2.9.10.jar:/Users/DOU7132/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.10/jackson-databind-2.9.10.jar:/Users/DOU7132/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.10/jackson-annotations-2.9.10.jar:/Users/DOU7132/.m2/repository/com/google/guava/guava/28.1-jre/guava-28.1-jre.jar:/Users/DOU7132/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/DOU7132/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/DOU7132/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/DOU7132/.m2/repository/org/checkerframework/checker-qual/2.8.1/checker-qual-2.8.1.jar:/Users/DOU7132/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.2/error_prone_annotations-2.3.2.jar:/Users/DOU7132/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/Users/DOU7132/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.18/animal-sniffer-annotations-1.18.jar:/Users/DOU7132/.m2/repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar:/Users/DOU7132/.m2/repository/org/apache/poi/poi-ooxml/4.1.0/poi-ooxml-4.1.0.jar:/Users/DOU7132/.m2/repository/org/apache/poi/poi-ooxml-schemas/4.1.0/poi-ooxml-schemas-4.1.0.jar:/Users/DOU7132/.m2/repository/org/apache/xmlbeans/xmlbeans/3.1.0/xmlbeans-3.1.0.jar:/Users/DOU7132/.m2/repository/org/apache/commons/commons-compress/1.18/commons-compress-1.18.jar:/Users/DOU7132/.m2/repository/com/github/virtuald/curvesapi/1.06/curvesapi-1.06.jar:/Users/DOU7132/.m2/repository/org/apache/poi/poi/4.1.0/poi-4.1.0.jar:/Users/DOU7132/.m2/repository/commons-codec/commons-codec/1.12/commons-codec-1.12.jar:/Users/DOU7132/.m2/repository/org/apache/commons/commons-collections4/4.3/commons-collections4-4.3.jar:/Users/DOU7132/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/DOU7132/.m2/repository/org/eclipse/jgit/org.eclipse.jgit/5.4.2.201908231537-r/org.eclipse.jgit-5.4.2.201908231537-r.jar:/Users/DOU7132/.m2/repository/com/jcraft/jsch/0.1.55/jsch-0.1.55.jar:/Users/DOU7132/.m2/repository/com/jcraft/jzlib/1.1.1/jzlib-1.1.1.jar:/Users/DOU7132/.m2/repository/com/googlecode/javaewah/JavaEWAH/1.1.6/JavaEWAH-1.1.6.jar:/Users/DOU7132/.m2/repository/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar:/Users/DOU7132/.m2/repository/org/bouncycastle/bcpg-jdk15on/1.61/bcpg-jdk15on-1.61.jar:/Users/DOU7132/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.61/bcprov-jdk15on-1.61.jar:/Users/DOU7132/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.61/bcpkix-jdk15on-1.61.jar:/Users/DOU7132/.m2/repository/org/json/json/20140107/json-20140107.jar:/Users/DOU7132/.m2/repository/org/jsoup/jsoup/1.11.1/jsoup-1.11.1.jar:/Users/DOU7132/.m2/repository/org/testng/testng/6.14.2/testng-6.14.2.jar:/Users/DOU7132/.m2/repository/com/beust/jcommander/1.72/jcommander-1.72.jar:/Users/DOU7132/.m2/repository/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar:/Users/DOU7132/.m2/repository/com/org/yaapita/lib-api-rest-helper/2.0.0/lib-api-rest-helper-2.0.0.jar:/Users/DOU7132/.m2/repository/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar:/Users/DOU7132/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/DOU7132/.m2/repository/com/org/yaapita/lib-yaapita-kroger-utils/2.1.0/lib-yaapita-kroger-utils-2.1.0.jar:/Users/DOU7132/.m2/repository/com/org/yaapita/lib-yaapita-reporting/3.0.0/lib-yaapita-reporting-3.0.0.jar:/Users/DOU7132/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.9.0/jackson-jaxrs-json-provider-2.9.0.jar:/Users/DOU7132/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.9.0/jackson-jaxrs-base-2.9.0.jar:/Users/DOU7132/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.9.0/jackson-module-jaxb-annotations-2.9.0.jar:/Users/DOU7132/.m2/repository/com/org/yaapita/lib-parse-files/2.0.0/lib-parse-files-2.0.0.jar:/Users/DOU7132/.m2/repository/com/org/yaapita/lib-db-util/3.0.0/lib-db-util-3.0.0.jar:/Users/DOU7132/.m2/repository/com/datastax/cassandra/cassandra-driver-core/3.6.0/cassandra-driver-core-3.6.0.jar:/Users/DOU7132/.m2/repository/io/netty/netty-handler/4.0.56.Final/netty-handler-4.0.56.Final.jar:/Users/DOU7132/.m2/repository/io/netty/netty-buffer/4.0.56.Final/netty-buffer-4.0.56.Final.jar:/Users/DOU7132/.m2/repository/io/netty/netty-codec/4.0.56.Final/netty-codec-4.0.56.Final.jar:/Users/DOU7132/.m2/repository/io/dropwizard/metrics/metrics-core/3.2.2/metrics-core-3.2.2.jar:/Users/DOU7132/.m2/repository/com/github/jnr/jnr-ffi/2.1.7/jnr-ffi-2.1.7.jar:/Users/DOU7132/.m2/repository/com/github/jnr/jffi/1.2.16/jffi-1.2.16.jar:/Users/DOU7132/.m2/repository/com/github/jnr/jffi/1.2.16/jffi-1.2.16-native.jar:/Users/DOU7132/.m2/repository/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar:/Users/DOU7132/.m2/repository/org/ow2/asm/asm-commons/5.0.3/asm-commons-5.0.3.jar:/Users/DOU7132/.m2/repository/org/ow2/asm/asm-analysis/5.0.3/asm-analysis-5.0.3.jar:/Users/DOU7132/.m2/repository/org/ow2/asm/asm-tree/5.0.3/asm-tree-5.0.3.jar:/Users/DOU7132/.m2/repository/org/ow2/asm/asm-util/5.0.3/asm-util-5.0.3.jar:/Users/DOU7132/.m2/repository/com/github/jnr/jnr-x86asm/1.0.2/jnr-x86asm-1.0.2.jar:/Users/DOU7132/.m2/repository/com/github/jnr/jnr-posix/3.0.44/jnr-posix-3.0.44.jar:/Users/DOU7132/.m2/repository/com/github/jnr/jnr-constants/0.9.9/jnr-constants-0.9.9.jar:/Users/DOU7132/.m2/repository/com/datastax/cassandra/cassandra-driver-mapping/3.6.0/cassandra-driver-mapping-3.6.0.jar:/Users/DOU7132/.m2/repository/com/datastax/cassandra/cassandra-driver-extras/3.6.0/cassandra-driver-extras-3.6.0.jar:/Users/DOU7132/.m2/repository/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar:/Users/DOU7132/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/DOU7132/.m2/repository/com/microsoft/sqlserver/mssql-jdbc/6.1.0.jre7/mssql-jdbc-6.1.0.jre7.jar:/Users/DOU7132/.m2/repository/com/microsoft/azure/azure-keyvault/0.9.3/azure-keyvault-0.9.3.jar:/Users/DOU7132/.m2/repository/com/microsoft/azure/azure-core/0.9.3/azure-core-0.9.3.jar:/Users/DOU7132/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/DOU7132/.m2/repository/javax/mail/mail/1.4.5/mail-1.4.5.jar:/Users/DOU7132/.m2/repository/com/sun/jersey/jersey-client/1.13/jersey-client-1.13.jar:/Users/DOU7132/.m2/repository/com/sun/jersey/jersey-core/1.13/jersey-core-1.13.jar:/Users/DOU7132/.m2/repository/com/sun/jersey/jersey-json/1.13/jersey-json-1.13.jar:/Users/DOU7132/.m2/repository/org/codehaus/jettison/jettison/1.1/jettison-1.1.jar:/Users/DOU7132/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar:/Users/DOU7132/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.jar:/Users/DOU7132/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.jar:/Users/DOU7132/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/DOU7132/.m2/repository/com/microsoft/azure/adal4j/1.0.0/adal4j-1.0.0.jar:/Users/DOU7132/.m2/repository/com/nimbusds/oauth2-oidc-sdk/4.5/oauth2-oidc-sdk-4.5.jar:/Users/DOU7132/.m2/repository/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar:/Users/DOU7132/.m2/repository/net/minidev/json-smart/1.1.1/json-smart-1.1.1.jar:/Users/DOU7132/.m2/repository/com/nimbusds/lang-tag/1.4/lang-tag-1.4.jar:/Users/DOU7132/.m2/repository/com/nimbusds/nimbus-jose-jwt/3.1.2/nimbus-jose-jwt-3.1.2.jar:/Users/DOU7132/.m2/repository/net/sourceforge/jtds/jtds/1.2/jtds-1.2.jar:/Users/DOU7132/.m2/repository/com/oracle/ojdbc6/11.2.0.3/ojdbc6-11.2.0.3.jar:/Users/DOU7132/.m2/repository/db2/db2jcc4/10.1.1/db2jcc4-10.1.1.jar:/Users/DOU7132/.m2/repository/com/ibm/informix/jdbc/4.10.12/jdbc-4.10.12.jar:/Users/DOU7132/.m2/repository/org/netezza/nzjdbc/4.6/nzjdbc-4.6.jar:/Users/DOU7132/.m2/repository/org/neo4j/neo4j-jdbc-bolt/3.4.0/neo4j-jdbc-bolt-3.4.0.jar:/Users/DOU7132/.m2/repository/org/neo4j/driver/neo4j-java-driver/1.6.1/neo4j-java-driver-1.6.1.jar:/Users/DOU7132/.m2/repository/org/neo4j/neo4j-jdbc/3.4.0/neo4j-jdbc-3.4.0.jar:/Users/DOU7132/.m2/repository/com/microsoft/azure/azure-cosmosdb/2.6.9/azure-cosmosdb-2.6.9.jar:/Users/DOU7132/.m2/repository/com/microsoft/azure/azure-cosmosdb-commons/2.6.9/azure-cosmosdb-commons-2.6.9.jar:/Users/DOU7132/.m2/repository/com/microsoft/azure/azure-cosmosdb-gateway/2.6.9/azure-cosmosdb-gateway-2.6.9.jar:/Users/DOU7132/.m2/repository/com/microsoft/azure/azure-cosmosdb-direct/2.6.9/azure-cosmosdb-direct-2.6.9.jar:/Users/DOU7132/.m2/repository/com/fasterxml/uuid/java-uuid-generator/3.1.4/java-uuid-generator-3.1.4.jar:/Users/DOU7132/.m2/repository/commons-io/commons-io/2.5/commons-io-2.5.jar:/Users/DOU7132/.m2/repository/com/github/davidmoten/rxjava-extras/0.8.0.17/rxjava-extras-0.8.0.17.jar:/Users/DOU7132/.m2/repository/io/reactivex/rxjava/1.3.8/rxjava-1.3.8.jar:/Users/DOU7132/.m2/repository/io/reactivex/rxjava-string/1.1.1/rxjava-string-1.1.1.jar:/Users/DOU7132/.m2/repository/io/reactivex/rxnetty/0.4.20/rxnetty-0.4.20.jar:/Users/DOU7132/.m2/repository/io/netty/netty-codec-http/4.1.50.Final/netty-codec-http-4.1.50.Final.jar:/Users/DOU7132/.m2/repository/io/netty/netty-common/4.1.50.Final/netty-common-4.1.50.Final.jar:/Users/DOU7132/.m2/repository/io/netty/netty-transport/4.1.50.Final/netty-transport-4.1.50.Final.jar:/Users/DOU7132/.m2/repository/io/netty/netty-resolver/4.1.50.Final/netty-resolver-4.1.50.Final.jar:/Users/DOU7132/.m2/repository/com/azure/azure-cosmos/4.0.1/azure-cosmos-4.0.1.jar:/Users/DOU7132/.m2/repository/io/netty/netty-codec-http2/4.1.49.Final/netty-codec-http2-4.1.49.Final.jar:/Users/DOU7132/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.10.1/jackson-datatype-jsr310-2.10.1.jar:/Users/DOU7132/.m2/repository/io/netty/netty-transport-native-epoll/4.1.49.Final/netty-transport-native-epoll-4.1.49.Final-linux-x86_64.jar:/Users/DOU7132/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.49.Final/netty-transport-native-unix-common-4.1.49.Final.jar:/Users/DOU7132/.m2/repository/io/netty/netty-handler-proxy/4.1.49.Final/netty-handler-proxy-4.1.49.Final.jar:/Users/DOU7132/.m2/repository/io/netty/netty-codec-socks/4.1.49.Final/netty-codec-socks-4.1.49.Final.jar:/Users/DOU7132/.m2/repository/io/projectreactor/reactor-core/3.3.5.RELEASE/reactor-core-3.3.5.RELEASE.jar:/Users/DOU7132/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/Users/DOU7132/.m2/repository/com/azure/azure-core/1.5.1/azure-core-1.5.1.jar:/Users/DOU7132/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.10.1/jackson-dataformat-xml-2.10.1.jar:/Users/DOU7132/.m2/repository/org/codehaus/woodstox/stax2-api/4.2/stax2-api-4.2.jar:/Users/DOU7132/.m2/repository/com/fasterxml/woodstox/woodstox-core/6.0.2/woodstox-core-6.0.2.jar:/Users/DOU7132/.m2/repository/com/fasterxml/jackson/module/jackson-module-afterburner/2.10.1/jackson-module-afterburner-2.10.1.jar:/Users/DOU7132/.m2/repository/io/micrometer/micrometer-core/1.2.0/micrometer-core-1.2.0.jar:/Users/DOU7132/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.11/HdrHistogram-2.1.11.jar:/Users/DOU7132/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/Users/DOU7132/.m2/repository/io/projectreactor/netty/reactor-netty/0.9.7.RELEASE/reactor-netty-0.9.7.RELEASE.jar:/Users/DOU7132/.m2/repository/org/postgresql/postgresql/42.2.5/postgresql-42.2.5.jar:/Users/DOU7132/.m2/repository/com/org/yaapita/lib-load-input-data/2.0.0/lib-load-input-data-2.0.0.jar:/Users/DOU7132/.m2/repository/com/opencsv/opencsv/4.0/opencsv-4.0.jar:/Users/DOU7132/.m2/repository/org/apache/commons/commons-text/1.1/commons-text-1.1.jar:/Users/DOU7132/.m2/repository/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3.jar:/Users/DOU7132/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/DOU7132/.m2/repository/com/org/yaapita/libmq/2.0.0/libmq-2.0.0.jar:/Users/DOU7132/.m2/repository/com/kroger/eprn/thirdparty/ibm.mq.client/8.0.0.7/ibm.mq.client-8.0.0.7.jar:/Users/DOU7132/.m2/repository/javax/resource/connector/1.0/connector-1.0.jar:/Users/DOU7132/.m2/repository/com/org/yaapita/libkafka/2.0.0/libkafka-2.0.0.jar:/Users/DOU7132/.m2/repository/org/apache/kafka/kafka-clients/0.10.2.0/kafka-clients-0.10.2.0.jar:/Users/DOU7132/.m2/repository/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.jar:/Users/DOU7132/.m2/repository/org/xerial/snappy/snappy-java/1.1.2.6/snappy-java-1.1.2.6.jar:/Users/DOU7132/.m2/repository/org/springframework/spring-messaging/5.2.6.RELEASE/spring-messaging-5.2.6.RELEASE.jar:/Users/DOU7132/.m2/repository/org/springframework/spring-beans/5.2.6.RELEASE/spring-beans-5.2.6.RELEASE.jar:/Users/DOU7132/.m2/repository/org/springframework/spring-core/5.2.6.RELEASE/spring-core-5.2.6.RELEASE.jar:/Users/DOU7132/.m2/repository/org/springframework/spring-jcl/5.2.6.RELEASE/spring-jcl-5.2.6.RELEASE.jar:/Users/DOU7132/.m2/repository/org/springframework/kafka/spring-kafka/2.5.0.RELEASE/spring-kafka-2.5.0.RELEASE.jar:/Users/DOU7132/.m2/repository/org/springframework/spring-context/5.2.6.RELEASE/spring-context-5.2.6.RELEASE.jar:/Users/DOU7132/.m2/repository/org/springframework/spring-aop/5.2.6.RELEASE/spring-aop-5.2.6.RELEASE.jar:/Users/DOU7132/.m2/repository/org/springframework/spring-expression/5.2.6.RELEASE/spring-expression-5.2.6.RELEASE.jar:/Users/DOU7132/.m2/repository/org/springframework/spring-tx/5.2.6.RELEASE/spring-tx-5.2.6.RELEASE.jar:/Users/DOU7132/.m2/repository/org/springframework/retry/spring-retry/1.2.5.RELEASE/spring-retry-1.2.5.RELEASE.jar:/Users/DOU7132/.m2/repository/io/confluent/kafka-avro-serializer/5.3.0/kafka-avro-serializer-5.3.0.jar:/Users/DOU7132/.m2/repository/org/apache/avro/avro/1.8.1/avro-1.8.1.jar:/Users/DOU7132/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar:/Users/DOU7132/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar:/Users/DOU7132/.m2/repository/com/thoughtworks/paranamer/paranamer/2.7/paranamer-2.7.jar:/Users/DOU7132/.m2/repository/org/tukaani/xz/1.5/xz-1.5.jar:/Users/DOU7132/.m2/repository/io/confluent/kafka-schema-registry-client/5.3.0/kafka-schema-registry-client-5.3.0.jar:/Users/DOU7132/.m2/repository/io/confluent/common-config/5.3.0/common-config-5.3.0.jar:/Users/DOU7132/.m2/repository/io/confluent/common-utils/5.3.0/common-utils-5.3.0.jar:/Users/DOU7132/.m2/repository/org/apache/zookeeper/zookeeper/3.4.14/zookeeper-3.4.14.jar:/Users/DOU7132/.m2/repository/com/github/spotbugs/spotbugs-annotations/3.1.9/spotbugs-annotations-3.1.9.jar:/Users/DOU7132/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar:/Users/DOU7132/.m2/repository/org/apache/yetus/audience-annotations/0.5.0/audience-annotations-0.5.0.jar:/Users/DOU7132/.m2/repository/io/netty/netty/3.10.6.Final/netty-3.10.6.Final.jar:/Users/DOU7132/.m2/repository/com/101tec/zkclient/0.10/zkclient-0.10.jar:/Users/DOU7132/.m2/repository/com/org/yaapita/lib-wiremock-helper/2.0.0/lib-wiremock-helper-2.0.0.jar:/Users/DOU7132/.m2/repository/com/org/jsonxassert/jsonxassert/2.0.0/jsonxassert-2.0.0.jar:/Users/DOU7132/.m2/repository/io/rest-assured/rest-assured/4.3.3/rest-assured-4.3.3.jar:/Users/DOU7132/.m2/repository/org/codehaus/groovy/groovy/3.0.7/groovy-3.0.7.jar:/Users/DOU7132/.m2/repository/org/codehaus/groovy/groovy-xml/3.0.7/groovy-xml-3.0.7.jar:/Users/DOU7132/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/Users/DOU7132/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/Users/DOU7132/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/DOU7132/.m2/repository/org/apache/httpcomponents/httpmime/4.5.3/httpmime-4.5.3.jar:/Users/DOU7132/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/DOU7132/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/DOU7132/.m2/repository/io/rest-assured/json-path/4.3.3/json-path-4.3.3.jar:/Users/DOU7132/.m2/repository/org/codehaus/groovy/groovy-json/3.0.7/groovy-json-3.0.7.jar:/Users/DOU7132/.m2/repository/io/rest-assured/rest-assured-common/4.3.3/rest-assured-common-4.3.3.jar:/Users/DOU7132/.m2/repository/io/rest-assured/xml-path/4.3.3/xml-path-4.3.3.jar:/Users/DOU7132/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/Users/DOU7132/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/Users/DOU7132/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.3/jaxb-impl-2.3.3.jar:/Users/DOU7132/.m2/repository/io/rest-assured/json-schema-validator/3.3.0/json-schema-validator-3.3.0.jar:/Users/DOU7132/.m2/repository/com/github/java-json-tools/json-schema-validator/2.2.10/json-schema-validator-2.2.10.jar:/Users/DOU7132/.m2/repository/com/github/java-json-tools/json-schema-core/1.2.10/json-schema-core-1.2.10.jar:/Users/DOU7132/.m2/repository/com/github/java-json-tools/jackson-coreutils/1.9/jackson-coreutils-1.9.jar:/Users/DOU7132/.m2/repository/com/github/fge/msg-simple/1.1/msg-simple-1.1.jar:/Users/DOU7132/.m2/repository/com/github/fge/btf/1.2/btf-1.2.jar:/Users/DOU7132/.m2/repository/com/github/fge/uri-template/0.9/uri-template-0.9.jar:/Users/DOU7132/.m2/repository/org/mozilla/rhino/1.7.7.1/rhino-1.7.7.1.jar:/Users/DOU7132/.m2/repository/javax/mail/mailapi/1.4.3/mailapi-1.4.3.jar:/Users/DOU7132/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/Users/DOU7132/.m2/repository/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar:/Users/DOU7132/.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.0.0/libphonenumber-8.0.0.jar:/Users/DOU7132/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.3/jopt-simple-5.0.3.jar:/Users/DOU7132/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/DOU7132"/>
+    <property name="user.language" value="en"/>
+    <property name="GET_ASSORTMENT_ITEMS_CHANGES" value="/assortment-items/changes"/>
+    <property name="https.proxyHost" value="127.0.0.1"/>
+    <property name="GET_CATALOGS" value="/catalogs"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/DOU7132/Workspaces/assortment-backend-atf/target/surefire/surefirebooter11272746410547417698.jar"/>
+    <property name="getAssortmentItems" value="getAssortmentItems.xlsx"/>
+    <property name="assortmentItemsSortBy" value="assortmentItemsSortBy.xlsx"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|vpn-hdc.kroger.com|*.vpn-hdc.kroger.com|vpn-cdc.kroger.com|*.vpn-cdc.kroger.com|pulseE31.kroger.com|*.pulseE31.kroger.com"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="12.4"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="putAssortmentItems" value="putAssortmentItems.xlsx"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="reportObjectPath" value="/Users/DOU7132/Workspaces/assortment-backend-atf/out/SoaTestReports/yaAPIta_reportObject.json"/>
+    <property name="getProducts" value="getProducts.xlsx"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="user.dir" value="/Users/DOU7132/Workspaces/assortment-backend-atf"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="env" value="test"/>
+    <property name="filterParam" value="true"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vm.version" value="18+36-2087"/>
+    <property name="ASSORTMENT_REPORTS_FC_REGULAR" value="/reports/fc-regular"/>
+    <property name="java.class.version" value="62.0"/>
+    <property name="http.proxyPort" value="3128"/>
+    <property name="assortmentItemsFilterByFC" value="assortmentItemsFilterByFC.xlsx"/>
+    <property name="getItemsByFilter" value="itemsByFilter.xlsx"/>
+  </properties>
+  <testcase name="validateGetAmtItems_pageOffset_TC003[{Test Case=GetAssormentItems filter by pageable=true and page.offset= 5, paramPageSize=10, S.No=1, ExecutionFlag=Y, filterParam=5, StatusCode=200}](1)" classname="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable" time="4.544">
+    <failure message=" [Error] Assortment Items according to offset 5 and page.size 10 were NOT correctly fetched expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError:  [Error] Assortment Items according to offset 5 and page.size 10 were NOT correctly fetched expected [true] but found [false]
+	at com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_TC003(GetAssortmentItemsPageable.java:158)
+]]></failure>
+    <system-out><![CDATA[...
+... TestNG 6.14.2 by Cédric Beust (cedric@beust.com)
+...
+
+********************************************************************
+-------------------------Test Suite Started-------------------------
+********************************************************************
+
+
+
+___    ___________________________            ____
+__ \     _____  _______ ___    |__  __ \___  _/_  /______ _    _  /
+___ \    __  / / /  __ `/_  /| |_  /_/ /__  / _  __/  __ `/    / / 
+__  /    _  /_/ // /_/ /_  ___ |  ____/__/ /  / /_ / /_/ /     \ \ 
+_/_/     _\__, / \__,_/ /_/  |_/_/     /___/  \__/ \__,_/       \_\
+         /____/                  
+
+https://gitlab.kroger.com/Yaapita/Yaapita
+ :: yaAPIta       ::         (v3.0.0)
+ :: Revision      ::         (458cfc1828c2e38a939a754695d6f7fa02912b4f)
+ :: Revision Date ::         (03-03-2021 21:15:20)
+There is a latest version of yaAPIta available. Please consider upgrading/refreshing cache : https://gitlab.kroger.com/Yaapita/Yaapita/blob/master/docs/GradleRefresh.md
+LATEST CHANGE :: April 16 - Added ability to add custom background color for reporting
+Please provide gitlab project id to log build Reference id to echo. Refer to: https://gitlab.kroger.com/Yaapita/Yaapita/blob/master/docs/LogResults_ECHO.md for details
+
+
+============================================================================================
+ Init validateGetAmtItems_pageOffset_TC003 
+[Test Scenario] 1 GetAssormentItems filter by pageable=true and page.offset= 5
+[Endpoint]  https://assortment-manager-core.amtapp-test.kpsazc.dgtl.kroger.com/assortment-items?pageable=true&page.size=10&page.offset=5
+
+
+Assortment Items by offset retrieved by API: [192305, 192301, 192201, 192101, 192001, 191901, 191802, 191801, 191701, 191601]
+Assortment Items by offset retrieved by DB:  [174301, 174302, 174303, 174304, 174201, 174202, 174207, 190809, 190901, 191001]
+
+[Correct]  Expected code: 200 VS  Obtained Status Code: 200
+[Error] Assortment Items according to offset 5 and page.size 10 were NOT correctly fetched
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="validateGetAmtItems_pageOffset_TC003[{Test Case=GetAssormentItems filter by pageable=true and page.offset= 6, paramPageSize=20, S.No=2, ExecutionFlag=Y, filterParam=6, StatusCode=200}](2)" classname="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable" time="4.194">
+    <failure message=" [Error] Assortment Items according to offset 6 and page.size 20 were NOT correctly fetched expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError:  [Error] Assortment Items according to offset 6 and page.size 20 were NOT correctly fetched expected [true] but found [false]
+	at com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_TC003(GetAssortmentItemsPageable.java:158)
+]]></failure>
+    <system-out><![CDATA[
+
+============================================================================================
+ Init validateGetAmtItems_pageOffset_TC003 
+[Test Scenario] 2 GetAssormentItems filter by pageable=true and page.offset= 6
+[Endpoint]  https://assortment-manager-core.amtapp-test.kpsazc.dgtl.kroger.com/assortment-items?pageable=true&page.size=20&page.offset=6
+
+
+Assortment Items by offset retrieved by API: [192301, 192201, 192101, 192001, 191901, 191802, 191801, 191701, 191601, 191501, 191401, 191301, 191201, 191101, 191001, 190901, 190809, 190708, 190808, 190707]
+Assortment Items by offset retrieved by DB:  [174302, 174303, 174304, 174201, 174202, 174207, 190809, 190901, 191001, 191101, 191201, 191301, 191401, 191501, 191601, 191701, 191801, 191802, 191901, 192001]
+
+[Correct]  Expected code: 200 VS  Obtained Status Code: 200
+[Error] Assortment Items according to offset 6 and page.size 20 were NOT correctly fetched
+]]></system-out>
+  </testcase>
+  <testcase name="validateGetAmtItems_pageOffset_TC003[{Test Case=GetAssormentItems filter by pageable=true and page.offset= 35, paramPageSize=30, S.No=3, ExecutionFlag=Y, filterParam=35, StatusCode=200}](3)" classname="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable" time="4.152">
+    <failure message=" [Error] Assortment Items according to offset 35 and page.size 30 were NOT correctly fetched expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError:  [Error] Assortment Items according to offset 35 and page.size 30 were NOT correctly fetched expected [true] but found [false]
+	at com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_TC003(GetAssortmentItemsPageable.java:158)
+]]></failure>
+    <system-out><![CDATA[
+
+============================================================================================
+ Init validateGetAmtItems_pageOffset_TC003 
+[Test Scenario] 3 GetAssormentItems filter by pageable=true and page.offset= 35
+[Endpoint]  https://assortment-manager-core.amtapp-test.kpsazc.dgtl.kroger.com/assortment-items?pageable=true&page.size=30&page.offset=35
+
+
+Assortment Items by offset retrieved by API: [14130, 161800, 161802, 161517, 190563, 190557, 190551, 190547, 190540, 190530, 190524, 190513, 190503, 190497, 190493, 190491, 190476, 190474, 190469, 190463, 190462, 190457, 190451, 190445, 190439, 190433, 190432, 190431, 190430, 190429]
+Assortment Items by offset retrieved by DB:  [13101, 13203, 172903, 172907, 172911, 172915, 172919, 172923, 13201, 13301, 172904, 172908, 172912, 172916, 172920, 172924, 13401, 172901, 172905, 172909, 172913, 172917, 172921, 172925, 173508, 173509, 173510, 173511, 173512, 173513]
+
+[Correct]  Expected code: 200 VS  Obtained Status Code: 200
+[Error] Assortment Items according to offset 35 and page.size 30 were NOT correctly fetched
+]]></system-out>
+  </testcase>
+  <testcase name="validateGetAmtItems_pageOffset_TC003[{Test Case=GetAssormentItems filter by pageable=true and page.offset= 72, paramPageSize=40, S.No=4, ExecutionFlag=Y, filterParam=72, StatusCode=200}](4)" classname="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable" time="4.38">
+    <failure message=" [Error] Assortment Items according to offset 72 and page.size 40 were NOT correctly fetched expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError:  [Error] Assortment Items according to offset 72 and page.size 40 were NOT correctly fetched expected [true] but found [false]
+	at com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_TC003(GetAssortmentItemsPageable.java:158)
+]]></failure>
+    <system-out><![CDATA[
+
+============================================================================================
+ Init validateGetAmtItems_pageOffset_TC003 
+[Test Scenario] 4 GetAssormentItems filter by pageable=true and page.offset= 72
+[Endpoint]  https://assortment-manager-core.amtapp-test.kpsazc.dgtl.kroger.com/assortment-items?pageable=true&page.size=40&page.offset=72
+
+
+Assortment Items by offset retrieved by API: [190380, 190374, 190368, 190362, 190356, 190350, 190344, 190338, 190332, 190326, 190320, 190314, 190308, 190302, 190296, 190295, 190290, 190289, 190284, 190278, 190277, 190272, 190266, 190260, 190254, 190248, 190242, 190237, 190231, 190225, 190224, 190223, 190222, 190221, 190220, 190219, 190213, 190208, 190203, 190197]
+Assortment Items by offset retrieved by DB:  [190807, 190808, 174501, 171107, 169818, 169841, 154061, 154062, 154063, 154064, 160084, 175337, 175338, 169831, 169963, 169877, 14101, 14102, 14103, 14104, 174805, 169828, 161814, 161815, 161816, 161817, 154058, 154059, 162958, 169846, 169840, 14105, 14106, 14107, 14108, 14109, 174811, 154198, 161582, 161583]
+
+[Correct]  Expected code: 200 VS  Obtained Status Code: 200
+[Error] Assortment Items according to offset 72 and page.size 40 were NOT correctly fetched
+]]></system-out>
+  </testcase>
+  <testcase name="validateGetAmtItems_pageOffset_TC003[{Test Case=GetAssormentItems filter by pageable=true and page.offset= 0, paramPageSize=50, S.No=5, ExecutionFlag=Y, filterParam=0, StatusCode=200}](5)" classname="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable" time="4.332">
+    <failure message=" [Error] Assortment Items according to offset 0 and page.size 50 were NOT correctly fetched expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError:  [Error] Assortment Items according to offset 0 and page.size 50 were NOT correctly fetched expected [true] but found [false]
+	at com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_TC003(GetAssortmentItemsPageable.java:158)
+]]></failure>
+    <system-out><![CDATA[
+
+============================================================================================
+ Init validateGetAmtItems_pageOffset_TC003 
+[Test Scenario] 5 GetAssormentItems filter by pageable=true and page.offset= 0
+[Endpoint]  https://assortment-manager-core.amtapp-test.kpsazc.dgtl.kroger.com/assortment-items?pageable=true&page.size=50&page.offset=0
+
+
+Assortment Items by offset retrieved by API: [13101, 192501, 192401, 192304, 192305, 192301, 192201, 192101, 192001, 191901, 191802, 191801, 191701, 191601, 191501, 191401, 191301, 191201, 191101, 191001, 190901, 190809, 190708, 190808, 190707, 190807, 190706, 190806, 190705, 190805, 14132, 174845, 14129, 14130, 14131, 161800, 161802, 161517, 190563, 190557, 190551, 190547, 190540, 190530, 190524, 190513, 190503, 190497, 190493, 190491]
+Assortment Items by offset retrieved by DB:  [174203, 174204, 174205, 174206, 174301, 174302, 174303, 174304, 174201, 174202, 174207, 190809, 190901, 191001, 191101, 191201, 191301, 191401, 191501, 191601, 191701, 191801, 191802, 191901, 192001, 192101, 192201, 192401, 192501, 172906, 172910, 172914, 172918, 172922, 13101, 13203, 172903, 172907, 172911, 172915, 172919, 172923, 13201, 13301, 172904, 172908, 172912, 172916, 172920, 172924]
+
+[Correct]  Expected code: 200 VS  Obtained Status Code: 200
+[Error] Assortment Items according to offset 0 and page.size 50 were NOT correctly fetched
+]]></system-out>
+  </testcase>
+  <testcase name="validateGetAmtItems_pageOffset_blankspaces_TC005" classname="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable" time="4.494">
+    <failure message=" [Error] Assortment Items according to offset 0 and page.size 70 were NOT correctly fetched expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError:  [Error] Assortment Items according to offset 0 and page.size 70 were NOT correctly fetched expected [true] but found [false]
+	at com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_blankspaces_TC005(GetAssortmentItemsPageable.java:230)
+]]></failure>
+    <system-out><![CDATA[
+
+============================================================================================
+ Init validateGetAmtItems_pageOffset_blankspaces_TC005 
+[Test Scenario] GetAssormentItems filter by pageable=true and page.offset= blank space
+[Endpoint]  https://assortment-manager-core.amtapp-test.kpsazc.dgtl.kroger.com/assortment-items?pageable=true&page.size=70&page.offset=
+
+
+Assortment Items by offset retrieved by API: [13101, 192501, 192401, 192304, 192305, 192301, 192201, 192101, 192001, 191901, 191802, 191801, 191701, 191601, 191501, 191401, 191301, 191201, 191101, 191001, 190901, 190809, 190708, 190808, 190707, 190807, 190706, 190806, 190705, 190805, 14132, 174845, 14129, 14130, 14131, 161800, 161802, 161517, 190563, 190557, 190551, 190547, 190540, 190530, 190524, 190513, 190503, 190497, 190493, 190491, 190476, 190474, 190469, 190463, 190462, 190457, 190451, 190445, 190439, 190433, 190432, 190431, 190430, 190429, 190428, 190422, 190415, 190405, 190399, 190393]
+Assortment Items by offset retrieved by DB:  [174203, 174204, 174205, 174206, 174301, 174302, 174303, 174304, 174201, 174202, 174207, 190809, 190901, 191001, 191101, 191201, 191301, 191401, 191501, 191601, 191701, 191801, 191802, 191901, 192001, 192101, 192201, 192401, 192501, 172906, 172910, 172914, 172918, 172922, 13101, 13203, 172903, 172907, 172911, 172915, 172919, 172923, 13201, 13301, 172904, 172908, 172912, 172916, 172920, 172924, 13401, 172901, 172905, 172909, 172913, 172917, 172921, 172925, 173508, 173509, 173510, 173511, 173512, 173513, 173514, 190705, 190706, 190707, 190708, 190805]
+
+[Correct]  Expected code: 200 VS  Obtained Status Code: 200
+[Error] Assortment Items according to offset 0 and page.size 70 were NOT correctly fetched
+]]></system-out>
+  </testcase>
+  <testcase name="validateGetAmtItems_pageOffset_empty_TC006" classname="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable" time="4.433">
+    <failure message=" [Error] Assortment Items according to offset 0 and page.size 60 were NOT correctly fetched expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError:  [Error] Assortment Items according to offset 0 and page.size 60 were NOT correctly fetched expected [true] but found [false]
+	at com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageOffset_empty_TC006(GetAssortmentItemsPageable.java:267)
+]]></failure>
+    <system-out><![CDATA[
+
+============================================================================================
+ Init validateGetAmtItems_pageOffset_empty_TC006 
+[Test Scenario] GetAssormentItems filter by pageable=true and page.offset= empty
+[Endpoint]  https://assortment-manager-core.amtapp-test.kpsazc.dgtl.kroger.com/assortment-items?pageable=true&page.size=60&page.offset=
+
+
+Assortment Items by offset retrieved by API: [13101, 192501, 192401, 192304, 192305, 192301, 192201, 192101, 192001, 191901, 191802, 191801, 191701, 191601, 191501, 191401, 191301, 191201, 191101, 191001, 190901, 190809, 190708, 190808, 190707, 190807, 190706, 190806, 190705, 190805, 14132, 174845, 14129, 14130, 14131, 161800, 161802, 161517, 190563, 190557, 190551, 190547, 190540, 190530, 190524, 190513, 190503, 190497, 190493, 190491, 190476, 190474, 190469, 190463, 190462, 190457, 190451, 190445, 190439, 190433]
+Assortment Items by offset retrieved by DB:  [174203, 174204, 174205, 174206, 174301, 174302, 174303, 174304, 174201, 174202, 174207, 190809, 190901, 191001, 191101, 191201, 191301, 191401, 191501, 191601, 191701, 191801, 191802, 191901, 192001, 192101, 192201, 192401, 192501, 172906, 172910, 172914, 172918, 172922, 13101, 13203, 172903, 172907, 172911, 172915, 172919, 172923, 13201, 13301, 172904, 172908, 172912, 172916, 172920, 172924, 13401, 172901, 172905, 172909, 172913, 172917, 172921, 172925, 173508, 173509]
+
+[Correct]  Expected code: 200 VS  Obtained Status Code: 200
+[Error] Assortment Items according to offset 0 and page.size 60 were NOT correctly fetched
+]]></system-out>
+  </testcase>
+  <testcase name="validateGetAmtItems_pageOffset_negativeNumber_TC004" classname="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable" time="1.44">
+    <system-out><![CDATA[
+
+============================================================================================
+ Init validateGetAmtItems_pageOffset_negativeNumber_TC004 
+[Test Scenario] Test getAssortmentItems with Pageable=true, page.size=10 and page.offset=negative number
+[Endpoint]  https://assortment-manager-core.amtapp-test.kpsazc.dgtl.kroger.com/assortment-items?pageable=true&page.size=10&page.offset=-1
+
+[Correct]  Expected code: 500 VS  Obtained Status Code: 500
+[Correct]  Assortment Items can't be filter with page.offset negative numbers so API responsed: [Internal Server Error]
+============================================================================================
+]]></system-out>
+  </testcase>
+  <testcase name="validateGetAmtItems_pageSize_TC002[{Expected=30, Test Case=GetAssortmentItems Pageable = true and page.size=30, S.No=1, ExecutionFlag=Y, filterParam=30, StatusCode=200}](1)" classname="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable" time="1.983">
+    <system-out><![CDATA[
+
+============================================================================================
+ Init validateGetAmtItems_pageSize_TC002 
+[Test Scenario] 1 GetAssortmentItems Pageable = true and page.size=30 Parameter page.size = 30
+[Endpoint]  https://assortment-manager-core.amtapp-test.kpsazc.dgtl.kroger.com/assortment-items?pageable=true&page.size=30
+
+[Correct]  Expected code: 200 VS  Obtained Status Code: 200
+[Correct]  Assortment Items according to page.Size = 30, Expected number of a items: 30 ,Current number of a items from API: 30
+============================================================================================
+]]></system-out>
+  </testcase>
+  <testcase name="validateGetAmtItems_pageSize_TC002[{Expected=50, Test Case=GetAssortmentItems Pageable = true and page.size=50, S.No=2, ExecutionFlag=Y, filterParam=50, StatusCode=200}](2)" classname="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable" time="2.05">
+    <system-out><![CDATA[
+
+============================================================================================
+ Init validateGetAmtItems_pageSize_TC002 
+[Test Scenario] 2 GetAssortmentItems Pageable = true and page.size=50 Parameter page.size = 50
+[Endpoint]  https://assortment-manager-core.amtapp-test.kpsazc.dgtl.kroger.com/assortment-items?pageable=true&page.size=50
+
+[Correct]  Expected code: 200 VS  Obtained Status Code: 200
+[Correct]  Assortment Items according to page.Size = 50, Expected number of a items: 50 ,Current number of a items from API: 50
+============================================================================================
+]]></system-out>
+  </testcase>
+  <testcase name="validateGetAmtItems_pageSize_TC002[{Expected=20, Test Case=GetAssortmentItems Pageable = true and page.size=empty, S.No=3, ExecutionFlag=Y, filterParam=null, StatusCode=200}](3)" classname="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable" time="1.936">
+    <system-out><![CDATA[
+
+============================================================================================
+ Init validateGetAmtItems_pageSize_TC002 
+[Test Scenario] 3 GetAssortmentItems Pageable = true and page.size=empty Parameter page.size = 
+[Endpoint]  https://assortment-manager-core.amtapp-test.kpsazc.dgtl.kroger.com/assortment-items?pageable=true&page.size=
+
+[Correct]  Expected code: 200 VS  Obtained Status Code: 200
+[Correct]  Assortment Items according to page.Size = , Expected number of a items: 20 ,Current number of a items from API: 20
+============================================================================================
+]]></system-out>
+  </testcase>
+  <testcase name="validateGetAmtItems_pageSize_TC002[{Expected=20, Test Case=GetAssortmentItems Pageable = true and page.size=blank, S.No=4, ExecutionFlag=y, filterParam= , StatusCode=200}](4)" classname="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable" time="1.993">
+    <system-out><![CDATA[
+
+============================================================================================
+ Init validateGetAmtItems_pageSize_TC002 
+[Test Scenario] 4 GetAssortmentItems Pageable = true and page.size=blank Parameter page.size =  
+[Endpoint]  https://assortment-manager-core.amtapp-test.kpsazc.dgtl.kroger.com/assortment-items?pageable=true&page.size= 
+
+[Correct]  Expected code: 200 VS  Obtained Status Code: 200
+[Correct]  Assortment Items according to page.Size =  , Expected number of a items: 20 ,Current number of a items from API: 20
+============================================================================================
+]]></system-out>
+  </testcase>
+  <testcase name="validateGetAmtItems_pageSize_TC002[{Expected=[assortment items were not found during search], Test Case=GetAssortmentItems Pageable = true and page.size=0, S.No=5, ExecutionFlag=y, filterParam=0, StatusCode=404}](5)" classname="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable" time="1.439">
+    <system-out><![CDATA[
+
+============================================================================================
+ Init validateGetAmtItems_pageSize_TC002 
+[Test Scenario] 5 GetAssortmentItems Pageable = true and page.size=0 Parameter page.size = 0
+[Endpoint]  https://assortment-manager-core.amtapp-test.kpsazc.dgtl.kroger.com/assortment-items?pageable=true&page.size=0
+
+[Correct]  Expected code: 404 VS  Obtained Status Code: 404
+[Correct]  Assortment Items according to page.Size = 0, Expected number of a items: [assortment items were not found during search] ,Current number of a items from API: [assortment items were not found during search]
+============================================================================================
+]]></system-out>
+  </testcase>
+  <testcase name="validateGetAmtItems_pageable_TC001[{Test Case=GET Assortment Items Pageable by default true, S.No=1, ExecutionFlag=Y, filterParam=, StatusCode=200}](1)" classname="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable" time="1.91">
+    <system-out><![CDATA[
+
+============================================================================================
+ Init validateGetAmtItems_pageable_TC001 
+[Test Scenario] 1 GET Assortment Items Pageable by default true Parameter Pageable = 
+[Endpoint]  https://assortment-manager-core.amtapp-test.kpsazc.dgtl.kroger.com/assortment-items?pageable=
+
+[Correct]  Expected code: 200 VS  Obtained Status Code: 200
+[Correct]  Assortment Items according to Pageable = true, Expected number of a items 20 Current number of a items from API 20
+============================================================================================
+]]></system-out>
+  </testcase>
+  <testcase name="validateGetAmtItems_pageable_TC001[{Test Case=GET Assortment Items Pageable = false, S.No=2, ExecutionFlag=Y, filterParam=false, StatusCode=200}](2)" classname="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable" time="181.355">
+    <failure message="1 expectation failed.&#10;Expected content-type &quot;JSON&quot; doesn&apos;t match actual content-type &quot;text/html&quot;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected content-type "JSON" doesn't match actual content-type "text/html".
+
+	at com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable.validateGetAmtItems_pageable_TC001(GetAssortmentItemsPageable.java:69)
+]]></failure>
+    <system-out><![CDATA[
+
+============================================================================================
+ Init validateGetAmtItems_pageable_TC001 
+[Test Scenario] 2 GET Assortment Items Pageable = false Parameter Pageable = false
+[Endpoint]  https://assortment-manager-core.amtapp-test.kpsazc.dgtl.kroger.com/assortment-items?pageable=false
+]]></system-out>
+  </testcase>
+  <testcase name="validateGetAmtItems_pageable_TC001[{Test Case=GET Assortment Items Pageable = true, S.No=3, ExecutionFlag=Y, filterParam=true, StatusCode=200}](3)" classname="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable" time="1.867">
+    <system-out><![CDATA[
+
+============================================================================================
+ Init validateGetAmtItems_pageable_TC001 
+[Test Scenario] 3 GET Assortment Items Pageable = true Parameter Pageable = true
+[Endpoint]  https://assortment-manager-core.amtapp-test.kpsazc.dgtl.kroger.com/assortment-items?pageable=true
+
+[Correct]  Expected code: 200 VS  Obtained Status Code: 200
+[Correct]  Assortment Items according to Pageable = true, Expected number of a items 20 Current number of a items from API 20
+============================================================================================
+]]></system-out>
+  </testcase>
+</testsuite>

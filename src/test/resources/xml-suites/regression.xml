@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="regression" verbose="2">
+    <parameter name="env" value="${env}"/>
+    <listeners>
+        <listener class-name="com.org.yaapita.YaapitaListener"/>
+    </listeners>
+    <test preserve-order="true" name="regression"  thread-count="1">
+        <classes>
+            <class name="com.kroger.assortment.api.assortmentmgmtcore.GetCatalogs"/>
+            <class name="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItems1"/>
+            <class name="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsSortBy"/>
+            <class name="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItemsPageable"/>
+            <class name="com.kroger.assortment.api.assortmentmgmtcore.PutAssortmentItems"/>
+            <class name="com.kroger.assortment.api.assortmentmgmtcore.PostAssortmentItems"/>
+            <class name="com.kroger.assortment.api.assortmentmgmtcore.PatchAssortmentItems"/>
+            <class name="com.kroger.assortment.api.assortmentmgmtcore.PostAssortmentReports"/>
+            <class name="com.kroger.assortment.api.assortmentmgmtcore.GetAssortmentItems2"/>
+        </classes>
+    </test>
+</suite>

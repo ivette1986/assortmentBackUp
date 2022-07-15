@@ -1,0 +1,2740 @@
+<!doctype html>
+<html>
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="description" content=""> 
+  <meta name="robots" content="noodp, noydir"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta id="timeStampFormat" name="timeStampFormat" content="MMM d, yyyy hh:mm:ss a"> 
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet" type="text/css"> 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+  <link href="https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css" type="text/css" rel="stylesheet"> 
+  <title>assortment-backend-atf</title> 
+  <style type="text/css">	</style>
+  <style type="text/css" media="screen">
+    #snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 6.5s;
+    animation: fadein 0.5s, fadeout 0.5s 6.5s;
+}
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+  </style>
+ </head> 
+ <body class="extent dark default hide-overflow "> 
+  <nav> 
+   <div class="nav-wrapper"> 
+    <a href="javascript:displayQuote()" class="brand-logo blue darken-3">Extent</a> 
+    <!-- slideout menu --> 
+    <ul id="slide-out" class="side-nav fixed hide-on-med-and-down"> 
+     <li class="waves-effect active"><a href="#!" view="test-view" onclick="configureView(0);chartsView('test');"><i class="material-icons">dashboard</i></a></li>  
+     <li class="waves-effect"><a href="#!" onclick="configureView(-1);chartsView('dashboard');" view="dashboard-view"><i class="material-icons">track_changes</i></a></li> 
+    </ul> 
+    <!-- report name --> 
+    <span class="report-name">assortment-backend-atf</span> 
+    <!-- report headline --> 
+    <span class="report-headline"></span> 
+    <!-- nav-right --> 
+    <ul id="nav-mobile" class="right hide-on-med-and-down nav-right"> 
+     <li> <a href="#!"> <span class="label suite-start-time blue darken-3">Jun 3, 2022 03:14:35 PM</span> </a> </li> 
+     <li> <a href="#!"> <span class="label blue darken-3">3.1.3</span> </a> </li> 
+    </ul> 
+   </div>
+  </nav> 
+  <!-- container --> 
+  <div class="container">
+   <div id="test-view" class="view"> 
+    <section id="controls"> 
+     <div class="controls grey lighten-4"> 
+      <!-- test toggle --> 
+      <div class="chip transparent"> 
+       <a class="dropdown-button tests-toggle" data-activates="tests-toggle" data-constrainwidth="true" data-beloworigin="true" data-hover="true" href="#"> <i class="material-icons">warning</i> Status </a> 
+       <ul id="tests-toggle" class="dropdown-content"> 
+        <li status="pass"><a href="#!">Pass <i class="material-icons green-text">check_circle</i></a></li> 
+        <li status="fail"><a href="#!">Fail <i class="material-icons red-text">cancel</i></a></li> 
+        <li class="divider"></li> 
+        <li status="clear" clear="true"><a href="#!">Clear Filters <i class="material-icons">clear</i></a></li> 
+       </ul> 
+      </div> 
+      <!-- test toggle --> 
+      <!-- category toggle --> 
+      <div class="chip transparent"> 
+       <a class="dropdown-button category-toggle" data-activates="category-toggle" data-constrainwidth="false" data-beloworigin="true" data-hover="true" href="#"> <i class="material-icons">local_offer</i> Category </a> 
+       <ul id="category-toggle" class="dropdown-content"> 
+        <li><a href="#">validateGetAssortmentItems_filterByFC_TC003</a></li> 
+        <li><a href="#">validateGetAssortmentItems_filterByFC_BlankSpaces_TC004</a></li> 
+        <li><a href="#">validateGetAssortmentItems_filterByFC_InvalidInputData_TC005</a></li> 
+        <li><a href="#">validateGetAmtItems_filterByUPC13_INVALIDA_INPUTDATA_TC007</a></li> 
+        <li><a href="#">validateGetAssortmentItems_filterByUPC13_BlankSpaces_TC008</a></li> 
+        <li><a href="#">validateGetAssortmentItems_filterByUPC13andFC_TC009</a></li> 
+        <li><a href="#">validateGetAmtItems_pageable_TC021</a></li> 
+        <li><a href="#">validateGetAmtItems_pageSize_TC022</a></li> 
+        <li><a href="#">validateGetAmtItems_pageOffset_TC023</a></li> 
+        <li><a href="#">validatePUTAssortmentItems_InvalidUpdate_TC028</a></li> 
+        <li><a href="#">validatePUTAssortmentItems_Status2_TC030</a></li> 
+        <li class="divider"></li> 
+        <li class="clear"><a href="#!" clear="true">Clear Filters</a></li> 
+       </ul> 
+      </div> 
+      <!-- category toggle --> 
+      <!-- clear filters --> 
+      <div class="chip transparent hide"> 
+       <a class="" id="clear-filters" alt="Clear Filters" title="Clear Filters"> <i class="material-icons">close</i> Clear </a> 
+      </div> 
+      <!-- clear filters --> 
+      <!-- enable dashboard --> 
+      <div id="toggle-test-view-charts" class="chip transparent"> 
+       <a class="pink-text" id="enable-dashboard" alt="Enable Dashboard" title="Enable Dashboard"> <i class="material-icons">track_changes</i> Dashboard </a> 
+      </div> 
+      <!-- enable dashboard --> 
+      <!-- search --> 
+      <div class="chip transparent" alt="Search Tests" title="Search Tests"> 
+       <a href="#" class="search-div"> <i class="material-icons">search</i> Search </a> 
+       <div class="input-field left hide"> 
+        <input id="search-tests" type="text" class="validate browser-default" placeholder="Search Tests..."> 
+       </div> 
+      </div> 
+      <!-- search --> 
+     </div> 
+    </section>
+    <div id="test-view-charts" class="subview-full"> 
+     <div id="charts-row" class="row nm-v nm-h"> 
+      <div class="col s12 m6 l6 np-h"> 
+       <div class="card-panel nm-v"> 
+        <div class="left panel-name">
+         Tests
+        </div> 
+        <div class="chart-box"> 
+         <canvas id="parent-analysis" width="100" height="80"></canvas> 
+        </div> 
+        <div class="block text-small"> 
+         <span class="tooltipped" data-position="top" data-tooltip="61.818%"><span class="strong">34</span> test(s) passed</span> 
+        </div> 
+        <div class="block text-small"> 
+         <span class="strong tooltipped" data-position="top" data-tooltip="38.182%">21</span> test(s) failed, 
+         <span class="strong tooltipped" data-position="top" data-tooltip="0%">0</span> others 
+        </div> 
+       </div> 
+      </div> 
+     </div>
+    </div> 
+    <div class="subview-left left"> 
+     <div class="view-summary"> 
+      <h5>Tests</h5> 
+      <ul id="test-collection" class="test-collection"> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="1"> 
+        <div class="test-heading"> 
+         <span class="test-name">AssortmentMgmtCore - getAssortmentItems filter by FC, testing complete Assortment name, should retrieve all assortment Items for Assortment</span> 
+         <span class="test-time">Jun 3, 2022 03:14:44 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:14:44 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:17:45 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 1s+770ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByFC_TC003</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="2"> 
+        <div class="test-heading"> 
+         <span class="test-name">AssortmentMgmtCore - getAssortmentItems filter by FC, testing complete Assortment name, should retrieve all assortment Items for Assortment</span> 
+         <span class="test-time">Jun 3, 2022 03:17:46 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:17:46 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:20:48 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 2s+53ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByFC_TC003</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="3"> 
+        <div class="test-heading"> 
+         <span class="test-name">AssortmentMgmtCore - getAssortmentItems filter by FC, testing complete Assortment name, should retrieve all assortment Items for Assortment</span> 
+         <span class="test-time">Jun 3, 2022 03:20:48 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:20:48 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:23:50 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 2s+24ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByFC_TC003</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="4"> 
+        <div class="test-heading"> 
+         <span class="test-name">getAssortmentItems filter by FC/UPC 13, Param: blank Assorment Name, should retrieve all existing assortment Items</span> 
+         <span class="test-time">Jun 3, 2022 03:23:50 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:23:50 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:26:52 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 2s+215ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByFC_BlankSpaces_TC004</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="5"> 
+        <div class="test-heading"> 
+         <span class="test-name">getAssortmentItems filter by FC/UPC13, Param: 1 blank space, should retrieve all existing assortment Items</span> 
+         <span class="test-time">Jun 3, 2022 03:26:52 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:26:52 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:29:55 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 3s+30ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByFC_BlankSpaces_TC004</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="6"> 
+        <div class="test-heading"> 
+         <span class="test-name">getAssortmentItems filter by FC/UPC13, Param: 3 blank spaces, should retrieve all existing assortment Items</span> 
+         <span class="test-time">Jun 3, 2022 03:29:55 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:29:55 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:32:58 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 2s+715ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByFC_BlankSpaces_TC004</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="7"> 
+        <div class="test-heading"> 
+         <span class="test-name">AssortmentMgmtCore - getAssortmentItems filter by FC INVALID INPUT DATA, Param: not existing assortment, should retrieve all existing assortment Items</span> 
+         <span class="test-time">Jun 3, 2022 03:32:58 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:32:58 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:33:52 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 54s+572ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByFC_InvalidInputData_TC005</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="8"> 
+        <div class="test-heading"> 
+         <span class="test-name">AssortmentMgmtCore - getAssortmentItems filter by FC INVALID INPUT DATA, Param: special character /, should retrieve all existing assortment Items</span> 
+         <span class="test-time">Jun 3, 2022 03:33:52 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:33:52 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:34:48 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 55s+549ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByFC_InvalidInputData_TC005</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="9"> 
+        <div class="test-heading"> 
+         <span class="test-name">AssortmentMgmtCore - getAssortmentItems filter by FC INVALID INPUT DATA, Param: special character ?, should retrieve all existing assortment Items</span> 
+         <span class="test-time">Jun 3, 2022 03:34:48 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:34:48 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:35:43 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 55s+655ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByFC_InvalidInputData_TC005</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="10"> 
+        <div class="test-heading"> 
+         <span class="test-name">AssortmentMgmtCore - getAssortmentItems filter by FC INVALID INPUT DATA, Param: special character :, should retrieve all existing assortment Items</span> 
+         <span class="test-time">Jun 3, 2022 03:35:43 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:35:43 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:36:40 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 56s+773ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByFC_InvalidInputData_TC005</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="11"> 
+        <div class="test-heading"> 
+         <span class="test-name">AssortmentMgmtCore - getAssortmentItems filter by FC INVALID INPUT DATA, Param: special character @, should retrieve all existing assortment Items</span> 
+         <span class="test-time">Jun 3, 2022 03:36:40 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:36:40 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:37:39 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 58s+355ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByFC_InvalidInputData_TC005</span> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByFC_InvalidInputData_TC005</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="12"> 
+        <div class="test-heading"> 
+         <span class="test-name">amtMgmtCore, UPC13.filter= param Unexisting UPC13</span> 
+         <span class="test-time">Jun 3, 2022 03:38:27 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:38:27 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:38:29 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 1s+920ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAmtItems_filterByUPC13_INVALIDA_INPUTDATA_TC007</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="13"> 
+        <div class="test-heading"> 
+         <span class="test-name">amtMgmtCore, UPC13.filter= param especial character escaped /</span> 
+         <span class="test-time">Jun 3, 2022 03:38:29 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:38:29 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:38:30 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 1s+854ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAmtItems_filterByUPC13_INVALIDA_INPUTDATA_TC007</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="14"> 
+        <div class="test-heading"> 
+         <span class="test-name">amtMgmtCore, UPC13.filter= param especial character escaped ?</span> 
+         <span class="test-time">Jun 3, 2022 03:38:30 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:38:30 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:38:32 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 1s+913ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAmtItems_filterByUPC13_INVALIDA_INPUTDATA_TC007</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="15"> 
+        <div class="test-heading"> 
+         <span class="test-name">amtMgmtCore, UPC13.filter= param especial character escaped :</span> 
+         <span class="test-time">Jun 3, 2022 03:38:32 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:38:32 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:38:34 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 1s+886ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAmtItems_filterByUPC13_INVALIDA_INPUTDATA_TC007</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="16"> 
+        <div class="test-heading"> 
+         <span class="test-name">amtMgmtCore, UPC13.filter= param especial character escaped @</span> 
+         <span class="test-time">Jun 3, 2022 03:38:34 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:38:34 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:38:36 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 2s+42ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAmtItems_filterByUPC13_INVALIDA_INPUTDATA_TC007</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="17"> 
+        <div class="test-heading"> 
+         <span class="test-name">getAssortmentItems filter by FC/UPC 13, Param: blank Assorment Name, should retrieve all existing assortment Items</span> 
+         <span class="test-time">Jun 3, 2022 03:38:36 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:38:36 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:41:38 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 1s+796ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByUPC13_BlankSpaces_TC008</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="18"> 
+        <div class="test-heading"> 
+         <span class="test-name">getAssortmentItems filter by FC/UPC13, Param: 1 blank space, should retrieve all existing assortment Items</span> 
+         <span class="test-time">Jun 3, 2022 03:41:38 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:41:38 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:44:43 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 4s+545ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByUPC13_BlankSpaces_TC008</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="19"> 
+        <div class="test-heading"> 
+         <span class="test-name">getAssortmentItems filter by FC/UPC13, Param: 3 blank spaces, should retrieve all existing assortment Items</span> 
+         <span class="test-time">Jun 3, 2022 03:44:43 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:44:43 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:47:47 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 4s+227ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByUPC13_BlankSpaces_TC008</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="20"> 
+        <div class="test-heading"> 
+         <span class="test-name">GET Assortment Items filter by existing UPC13 and existing FC</span> 
+         <span class="test-time">Jun 3, 2022 03:47:47 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:47:47 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:48:11 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 24s+81ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByUPC13andFC_TC009</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="21"> 
+        <div class="test-heading"> 
+         <span class="test-name">GET Assortment Items filter by existing UPC13 and no existing FC</span> 
+         <span class="test-time">Jun 3, 2022 03:48:11 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:48:11 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:48:34 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 23s+81ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByUPC13andFC_TC009</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="22"> 
+        <div class="test-heading"> 
+         <span class="test-name">GET Assortment Items filter by no existing UPC13 and existing FC</span> 
+         <span class="test-time">Jun 3, 2022 03:48:34 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:48:34 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:48:58 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 24s+297ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByUPC13andFC_TC009</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="23"> 
+        <div class="test-heading"> 
+         <span class="test-name">GET Assortment Items filter by no existing UPC13 and no existing FC</span> 
+         <span class="test-time">Jun 3, 2022 03:48:58 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:48:58 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:49:27 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 28s+852ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByUPC13andFC_TC009</span> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByUPC13andFC_TC009</span> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByUPC13andFC_TC009</span> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByUPC13andFC_TC009</span> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByUPC13andFC_TC009</span> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByUPC13andFC_TC009</span> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByUPC13andFC_TC009</span> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByUPC13andFC_TC009</span> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByUPC13andFC_TC009</span> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByUPC13andFC_TC009</span> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByUPC13andFC_TC009</span> 
+           <span class="category label white-text">validateGetAssortmentItems_filterByUPC13andFC_TC009</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="24"> 
+        <div class="test-heading"> 
+         <span class="test-name">GET Assortment Items Pageable by default true</span> 
+         <span class="test-time">Jun 3, 2022 03:50:19 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:50:19 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:53:21 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 1s+835ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAmtItems_pageable_TC021</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="25"> 
+        <div class="test-heading"> 
+         <span class="test-name">GET Assortment Items Pageable = false</span> 
+         <span class="test-time">Jun 3, 2022 03:53:21 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:53:21 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:56:22 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 1s+664ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAmtItems_pageable_TC021</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="26"> 
+        <div class="test-heading"> 
+         <span class="test-name">GET Assortment Items Pageable = true</span> 
+         <span class="test-time">Jun 3, 2022 03:56:23 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:56:23 PM</span> 
+          <span class="label end-time">Jun 3, 2022 03:59:24 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 1s+782ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAmtItems_pageable_TC021</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="27"> 
+        <div class="test-heading"> 
+         <span class="test-name">GetAssortmentItems Pageable = true and page.size=30</span> 
+         <span class="test-time">Jun 3, 2022 03:59:24 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 03:59:24 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:02:26 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 1s+551ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAmtItems_pageSize_TC022</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="28"> 
+        <div class="test-heading"> 
+         <span class="test-name">GetAssortmentItems Pageable = true and page.size=50</span> 
+         <span class="test-time">Jun 3, 2022 04:02:26 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:02:26 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:05:28 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 1s+868ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAmtItems_pageSize_TC022</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="29"> 
+        <div class="test-heading"> 
+         <span class="test-name">GetAssortmentItems Pageable = true and page.size=empty</span> 
+         <span class="test-time">Jun 3, 2022 04:05:28 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:05:28 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:08:30 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 1s+953ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAmtItems_pageSize_TC022</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="30"> 
+        <div class="test-heading"> 
+         <span class="test-name">GetAssortmentItems Pageable = true and page.size=blank</span> 
+         <span class="test-time">Jun 3, 2022 04:08:30 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:08:30 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:11:32 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 1s+998ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAmtItems_pageSize_TC022</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="31"> 
+        <div class="test-heading"> 
+         <span class="test-name">GetAssortmentItems Pageable = true and page.size=0</span> 
+         <span class="test-time">Jun 3, 2022 04:11:32 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:11:32 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:11:34 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 2s+74ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAmtItems_pageSize_TC022</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="32"> 
+        <div class="test-heading"> 
+         <span class="test-name">GetAssormentItems filter by pageable=true and page.offset= 5</span> 
+         <span class="test-time">Jun 3, 2022 04:11:34 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:11:34 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:14:36 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 1s+891ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAmtItems_pageOffset_TC023</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="33"> 
+        <div class="test-heading"> 
+         <span class="test-name">GetAssormentItems filter by pageable=true and page.offset= 6</span> 
+         <span class="test-time">Jun 3, 2022 04:14:36 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:14:36 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:17:38 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 1s+778ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAmtItems_pageOffset_TC023</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="34"> 
+        <div class="test-heading"> 
+         <span class="test-name">GetAssormentItems filter by pageable=true and page.offset= 35</span> 
+         <span class="test-time">Jun 3, 2022 04:17:38 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:17:38 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:20:39 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 1s+824ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAmtItems_pageOffset_TC023</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="35"> 
+        <div class="test-heading"> 
+         <span class="test-name">GetAssormentItems filter by pageable=true and page.offset= 72</span> 
+         <span class="test-time">Jun 3, 2022 04:20:39 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:20:39 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:23:41 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 1s+947ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAmtItems_pageOffset_TC023</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  fail" status="fail" bdd="false" test-id="36"> 
+        <div class="test-heading"> 
+         <span class="test-name">GetAssormentItems filter by pageable=true and page.offset= 0</span> 
+         <span class="test-time">Jun 3, 2022 04:23:41 PM</span> 
+         <span class="test-status right fail">fail</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:23:41 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:26:43 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 3m 1s+659ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validateGetAmtItems_pageOffset_TC023</span> 
+           <span class="category label white-text">validateGetAmtItems_pageOffset_TC023</span> 
+           <span class="category label white-text">validateGetAmtItems_pageOffset_TC023</span> 
+           <span class="category label white-text">validateGetAmtItems_pageOffset_TC023</span> 
+           <span class="category label white-text">validateGetAmtItems_pageOffset_TC023</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="fail">  
+             <td class="timestamp">Error Message</td> 
+             <td class="step-details">java.lang.AssertionError: 1 expectation failed.Expected content-type "JSON" doesn't match actual content-type "text/html".</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="37"> 
+        <div class="test-heading"> 
+         <span class="test-name">item&nbsp;status&nbsp;=&nbsp;4&nbsp;(active)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</span> 
+         <span class="test-time">Jun 3, 2022 04:33:07 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:33:07 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:33:18 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 11s+378ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validatePUTAssortmentItems_InvalidUpdate_TC028</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="38"> 
+        <div class="test-heading"> 
+         <span class="test-name">item&nbsp;status&nbsp;=&nbsp;4&nbsp;(active)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;3&nbsp;(permanent)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</span> 
+         <span class="test-time">Jun 3, 2022 04:33:18 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:33:18 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:33:29 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 10s+944ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validatePUTAssortmentItems_InvalidUpdate_TC028</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="39"> 
+        <div class="test-heading"> 
+         <span class="test-name">item&nbsp;status != 7 (store pick permanent)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</span> 
+         <span class="test-time">Jun 3, 2022 04:33:29 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:33:29 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:33:41 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 11s+720ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validatePUTAssortmentItems_InvalidUpdate_TC028</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="40"> 
+        <div class="test-heading"> 
+         <span class="test-name">item&nbsp;status != 7 (store pick permanent)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</span> 
+         <span class="test-time">Jun 3, 2022 04:33:41 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:33:41 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:33:54 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 13s+119ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validatePUTAssortmentItems_InvalidUpdate_TC028</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="41"> 
+        <div class="test-heading"> 
+         <span class="test-name">item&nbsp;status != 7 (store pick permanent)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</span> 
+         <span class="test-time">Jun 3, 2022 04:33:54 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:33:54 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:34:07 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 12s+456ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validatePUTAssortmentItems_InvalidUpdate_TC028</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="42"> 
+        <div class="test-heading"> 
+         <span class="test-name">item&nbsp;status != 7 (store pick permanent)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</span> 
+         <span class="test-time">Jun 3, 2022 04:34:07 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:34:07 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:34:18 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 11s+815ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validatePUTAssortmentItems_InvalidUpdate_TC028</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="43"> 
+        <div class="test-heading"> 
+         <span class="test-name">item&nbsp;status != 7 (store pick permanent)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</span> 
+         <span class="test-time">Jun 3, 2022 04:34:18 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:34:18 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:34:30 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 11s+520ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validatePUTAssortmentItems_InvalidUpdate_TC028</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="44"> 
+        <div class="test-heading"> 
+         <span class="test-name">item&nbsp;status != 7 (store pick permanent)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</span> 
+         <span class="test-time">Jun 3, 2022 04:34:30 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:34:30 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:34:42 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 12s+397ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validatePUTAssortmentItems_InvalidUpdate_TC028</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="45"> 
+        <div class="test-heading"> 
+         <span class="test-name">item&nbsp;status =&nbsp;NULL&nbsp;or&nbsp;invalid&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;3&nbsp;(permanent)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</span> 
+         <span class="test-time">Jun 3, 2022 04:34:42 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:34:42 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:34:57 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 14s+218ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validatePUTAssortmentItems_InvalidUpdate_TC028</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="46"> 
+        <div class="test-heading"> 
+         <span class="test-name">item&nbsp;status =&nbsp;NULL&nbsp;or&nbsp;invalid&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;3&nbsp;(permanent)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</span> 
+         <span class="test-time">Jun 3, 2022 04:34:57 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:34:57 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:35:08 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 11s+612ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validatePUTAssortmentItems_InvalidUpdate_TC028</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="47"> 
+        <div class="test-heading"> 
+         <span class="test-name">item&nbsp;status =&nbsp;1 (Work in progress)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;= Null or invalid&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</span> 
+         <span class="test-time">Jun 3, 2022 04:35:08 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:35:08 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:35:22 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 14s+146ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validatePUTAssortmentItems_InvalidUpdate_TC028</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="48"> 
+        <div class="test-heading"> 
+         <span class="test-name">item&nbsp;status =&nbsp;1 (Work in progress)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;= Null or invalid&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</span> 
+         <span class="test-time">Jun 3, 2022 04:35:22 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:35:22 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:35:37 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 14s+540ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validatePUTAssortmentItems_InvalidUpdate_TC028</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="49"> 
+        <div class="test-heading"> 
+         <span class="test-name">item&nbsp;status&nbsp;=&nbsp;Null or invalid&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;Null or invalid&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</span> 
+         <span class="test-time">Jun 3, 2022 04:35:37 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:35:37 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:35:54 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 16s+923ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validatePUTAssortmentItems_InvalidUpdate_TC028</span> 
+           <span class="category label white-text">validatePUTAssortmentItems_InvalidUpdate_TC028</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="50"> 
+        <div class="test-heading"> 
+         <span class="test-name">item&nbsp;status&nbsp;in&nbsp;the&nbsp;request&nbsp;=&nbsp;1&nbsp;(active)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;AND&nbsp;current&nbsp;item&nbsp;status&nbsp;in&nbsp;DB&nbsp;=&nbsp;4&nbsp;(active)&nbsp;=&gt;&nbsp;[SET&nbsp;item&nbsp;status&nbsp;=&nbsp;2&nbsp;(Setup&nbsp;In&nbsp;Progress)]</span> 
+         <span class="test-time">Jun 3, 2022 04:36:08 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:36:08 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:36:33 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 25s+404ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="51"> 
+        <div class="test-heading"> 
+         <span class="test-name">item&nbsp;status&nbsp;in&nbsp;the&nbsp;request&nbsp;=&nbsp;2&nbsp;(active)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;AND&nbsp;current&nbsp;item&nbsp;status&nbsp;in&nbsp;DB&nbsp;=&nbsp;4&nbsp;(active)&nbsp;=&gt;&nbsp;[SET&nbsp;item&nbsp;status&nbsp;=&nbsp;2&nbsp;(Setup&nbsp;In&nbsp;Progress)]</span> 
+         <span class="test-time">Jun 3, 2022 04:36:33 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:36:33 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:36:59 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 25s+837ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="52"> 
+        <div class="test-heading"> 
+         <span class="test-name">item&nbsp;status&nbsp;in&nbsp;the&nbsp;request&nbsp;=&nbsp;3&nbsp;(active)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;AND&nbsp;current&nbsp;item&nbsp;status&nbsp;in&nbsp;DB&nbsp;=&nbsp;4&nbsp;(active)&nbsp;=&gt;&nbsp;[SET&nbsp;item&nbsp;status&nbsp;=&nbsp;2&nbsp;(Setup&nbsp;In&nbsp;Progress)]</span> 
+         <span class="test-time">Jun 3, 2022 04:36:59 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:36:59 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:37:32 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 32s+854ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="53"> 
+        <div class="test-heading"> 
+         <span class="test-name">item&nbsp;status&nbsp;in&nbsp;the&nbsp;request&nbsp;=&nbsp;5&nbsp;(active)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;AND&nbsp;current&nbsp;item&nbsp;status&nbsp;in&nbsp;DB&nbsp;=&nbsp;4&nbsp;(active)&nbsp;=&gt;&nbsp;[SET&nbsp;item&nbsp;status&nbsp;=&nbsp;2&nbsp;(Setup&nbsp;In&nbsp;Progress)]</span> 
+         <span class="test-time">Jun 3, 2022 04:37:32 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:37:32 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:37:59 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 27s+173ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="54"> 
+        <div class="test-heading"> 
+         <span class="test-name">item&nbsp;status&nbsp;in&nbsp;the&nbsp;request&nbsp;=&nbsp;6&nbsp;(active)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;AND&nbsp;current&nbsp;item&nbsp;status&nbsp;in&nbsp;DB&nbsp;=&nbsp;4&nbsp;(active)&nbsp;=&gt;&nbsp;[SET&nbsp;item&nbsp;status&nbsp;=&nbsp;2&nbsp;(Setup&nbsp;In&nbsp;Progress)]</span> 
+         <span class="test-time">Jun 3, 2022 04:37:59 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:37:59 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:38:24 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 25s+244ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="test displayed active  pass" status="pass" bdd="false" test-id="55"> 
+        <div class="test-heading"> 
+         <span class="test-name">item&nbsp;status&nbsp;in&nbsp;the&nbsp;request&nbsp;=&nbsp;7&nbsp;(active)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;AND&nbsp;current&nbsp;item&nbsp;status&nbsp;in&nbsp;DB&nbsp;=&nbsp;4&nbsp;(active)&nbsp;=&gt;&nbsp;[SET&nbsp;item&nbsp;status&nbsp;=&nbsp;2&nbsp;(Setup&nbsp;In&nbsp;Progress)]</span> 
+         <span class="test-time">Jun 3, 2022 04:38:24 PM</span> 
+         <span class="test-status right pass">pass</span> 
+        </div> 
+        <div class="test-content hide">
+         <div class="test-time-info"> 
+          <span class="label start-time">Jun 3, 2022 04:38:24 PM</span> 
+          <span class="label end-time">Jun 3, 2022 04:38:50 PM</span> 
+          <span class="label time-taken grey lighten-1 white-text">0h 0m 25s+390ms</span>
+         </div> 
+         <div class="test-attributes"> 
+          <div class="category-list"> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+           <span class="category label white-text">validatePUTAssortmentItems_Status2_TC030</span> 
+          </div> 
+         </div> 
+         <div class="test-steps"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr class="log" status="pass">  
+             <td class="timestamp">Test Status</td> 
+             <td class="step-details">Test Passed</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+      </ul> 
+     </div> 
+    </div> 
+    <!-- subview left --> 
+    <div class="subview-right left"> 
+     <div class="view-summary"> 
+      <h5 class="test-name"></h5>  
+     </div> 
+    </div> 
+    <!-- subview right -->
+   </div>
+   <!-- test view -->
+   <div id="category-view" class="view hide"> 
+    <section id="controls"> 
+     <div class="controls grey lighten-4"> 
+      <!-- search --> 
+      <div class="chip transparent" alt="Search Tests" title="Search Tests"> 
+       <a href="#" class="search-div"> <i class="material-icons">search</i> Search </a> 
+       <div class="input-field left hide"> 
+        <input id="search-tests" type="text" class="validate browser-default" placeholder="Search Tests..."> 
+       </div> 
+      </div> 
+      <!-- search --> 
+     </div> 
+    </section> 
+    <div class="subview-left left"> 
+     <div class="view-summary"> 
+      <h5>Categories</h5> 
+      <ul id="category-collection" class="category-collection"> 
+       <li class="category displayed active"> 
+        <div class="category-heading"> 
+         <span class="category-name">validateGetAssortmentItems_filterByFC_TC003</span> 
+         <span class="category-status right"> <span class="label fail">3</span> </span> 
+        </div> 
+        <div class="category-content hide"> 
+         <div class="category-status-counts"> 
+          <span class="label red lighten-1 white-text">Failed: 3</span> 
+         </div> 
+         <div class="category-tests"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr>  
+             <td class="linked" test-id="1">AssortmentMgmtCore - getAssortmentItems filter by FC, testing complete Assortment name, should retrieve all assortment Items for Assortment</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="2">AssortmentMgmtCore - getAssortmentItems filter by FC, testing complete Assortment name, should retrieve all assortment Items for Assortment</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="3">AssortmentMgmtCore - getAssortmentItems filter by FC, testing complete Assortment name, should retrieve all assortment Items for Assortment</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="category displayed active"> 
+        <div class="category-heading"> 
+         <span class="category-name">validateGetAssortmentItems_filterByFC_BlankSpaces_TC004</span> 
+         <span class="category-status right"> <span class="label fail">3</span> </span> 
+        </div> 
+        <div class="category-content hide"> 
+         <div class="category-status-counts"> 
+          <span class="label red lighten-1 white-text">Failed: 3</span> 
+         </div> 
+         <div class="category-tests"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr>  
+             <td class="linked" test-id="4">getAssortmentItems filter by FC/UPC 13, Param: blank Assorment Name, should retrieve all existing assortment Items</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="5">getAssortmentItems filter by FC/UPC13, Param: 1 blank space, should retrieve all existing assortment Items</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="6">getAssortmentItems filter by FC/UPC13, Param: 3 blank spaces, should retrieve all existing assortment Items</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="category displayed active"> 
+        <div class="category-heading"> 
+         <span class="category-name">validateGetAssortmentItems_filterByFC_InvalidInputData_TC005</span> 
+         <span class="category-status right"> <span class="label pass">5</span> </span> 
+        </div> 
+        <div class="category-content hide"> 
+         <div class="category-status-counts"> 
+          <span class="label green accent-4 white-text">Passed: 5</span> 
+         </div> 
+         <div class="category-tests"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr>  
+             <td class="linked" test-id="7">AssortmentMgmtCore - getAssortmentItems filter by FC INVALID INPUT DATA, Param: not existing assortment, should retrieve all existing assortment Items</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="8">AssortmentMgmtCore - getAssortmentItems filter by FC INVALID INPUT DATA, Param: special character /, should retrieve all existing assortment Items</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="9">AssortmentMgmtCore - getAssortmentItems filter by FC INVALID INPUT DATA, Param: special character ?, should retrieve all existing assortment Items</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="10">AssortmentMgmtCore - getAssortmentItems filter by FC INVALID INPUT DATA, Param: special character :, should retrieve all existing assortment Items</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="11">AssortmentMgmtCore - getAssortmentItems filter by FC INVALID INPUT DATA, Param: special character @, should retrieve all existing assortment Items</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="category displayed active"> 
+        <div class="category-heading"> 
+         <span class="category-name">validateGetAmtItems_filterByUPC13_INVALIDA_INPUTDATA_TC007</span> 
+         <span class="category-status right"> <span class="label pass">5</span> </span> 
+        </div> 
+        <div class="category-content hide"> 
+         <div class="category-status-counts"> 
+          <span class="label green accent-4 white-text">Passed: 5</span> 
+         </div> 
+         <div class="category-tests"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr>  
+             <td class="linked" test-id="12">amtMgmtCore, UPC13.filter= param Unexisting UPC13</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="13">amtMgmtCore, UPC13.filter= param especial character escaped /</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="14">amtMgmtCore, UPC13.filter= param especial character escaped ?</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="15">amtMgmtCore, UPC13.filter= param especial character escaped :</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="16">amtMgmtCore, UPC13.filter= param especial character escaped @</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="category displayed active"> 
+        <div class="category-heading"> 
+         <span class="category-name">validateGetAssortmentItems_filterByUPC13_BlankSpaces_TC008</span> 
+         <span class="category-status right"> <span class="label fail">3</span> </span> 
+        </div> 
+        <div class="category-content hide"> 
+         <div class="category-status-counts"> 
+          <span class="label red lighten-1 white-text">Failed: 3</span> 
+         </div> 
+         <div class="category-tests"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr>  
+             <td class="linked" test-id="17">getAssortmentItems filter by FC/UPC 13, Param: blank Assorment Name, should retrieve all existing assortment Items</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="18">getAssortmentItems filter by FC/UPC13, Param: 1 blank space, should retrieve all existing assortment Items</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="19">getAssortmentItems filter by FC/UPC13, Param: 3 blank spaces, should retrieve all existing assortment Items</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="category displayed active"> 
+        <div class="category-heading"> 
+         <span class="category-name">validateGetAssortmentItems_filterByUPC13andFC_TC009</span> 
+         <span class="category-status right"> <span class="label pass">4</span> </span> 
+        </div> 
+        <div class="category-content hide"> 
+         <div class="category-status-counts"> 
+          <span class="label green accent-4 white-text">Passed: 4</span> 
+         </div> 
+         <div class="category-tests"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr>  
+             <td class="linked" test-id="20">GET Assortment Items filter by existing UPC13 and existing FC</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="21">GET Assortment Items filter by existing UPC13 and no existing FC</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="22">GET Assortment Items filter by no existing UPC13 and existing FC</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="23">GET Assortment Items filter by no existing UPC13 and no existing FC</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="category displayed active"> 
+        <div class="category-heading"> 
+         <span class="category-name">validateGetAmtItems_pageable_TC021</span> 
+         <span class="category-status right"> <span class="label fail">3</span> </span> 
+        </div> 
+        <div class="category-content hide"> 
+         <div class="category-status-counts"> 
+          <span class="label red lighten-1 white-text">Failed: 3</span> 
+         </div> 
+         <div class="category-tests"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr>  
+             <td class="linked" test-id="24">GET Assortment Items Pageable by default true</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="25">GET Assortment Items Pageable = false</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="26">GET Assortment Items Pageable = true</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="category displayed active"> 
+        <div class="category-heading"> 
+         <span class="category-name">validateGetAmtItems_pageSize_TC022</span> 
+         <span class="category-status right"> <span class="label pass">1</span> <span class="label fail">4</span> </span> 
+        </div> 
+        <div class="category-content hide"> 
+         <div class="category-status-counts"> 
+          <span class="label green accent-4 white-text">Passed: 1</span> 
+          <span class="label red lighten-1 white-text">Failed: 4</span> 
+         </div> 
+         <div class="category-tests"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr>  
+             <td class="linked" test-id="27">GetAssortmentItems Pageable = true and page.size=30</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="28">GetAssortmentItems Pageable = true and page.size=50</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="29">GetAssortmentItems Pageable = true and page.size=empty</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="30">GetAssortmentItems Pageable = true and page.size=blank</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="31">GetAssortmentItems Pageable = true and page.size=0</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="category displayed active"> 
+        <div class="category-heading"> 
+         <span class="category-name">validateGetAmtItems_pageOffset_TC023</span> 
+         <span class="category-status right"> <span class="label fail">5</span> </span> 
+        </div> 
+        <div class="category-content hide"> 
+         <div class="category-status-counts"> 
+          <span class="label red lighten-1 white-text">Failed: 5</span> 
+         </div> 
+         <div class="category-tests"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr>  
+             <td class="linked" test-id="32">GetAssormentItems filter by pageable=true and page.offset= 5</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="33">GetAssormentItems filter by pageable=true and page.offset= 6</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="34">GetAssormentItems filter by pageable=true and page.offset= 35</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="35">GetAssormentItems filter by pageable=true and page.offset= 72</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="36">GetAssormentItems filter by pageable=true and page.offset= 0</td> 
+             <td><span class="test-status fail">fail</span></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="category displayed active"> 
+        <div class="category-heading"> 
+         <span class="category-name">validatePUTAssortmentItems_InvalidUpdate_TC028</span> 
+         <span class="category-status right"> <span class="label pass">13</span> </span> 
+        </div> 
+        <div class="category-content hide"> 
+         <div class="category-status-counts"> 
+          <span class="label green accent-4 white-text">Passed: 13</span> 
+         </div> 
+         <div class="category-tests"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr>  
+             <td class="linked" test-id="37">item&nbsp;status&nbsp;=&nbsp;4&nbsp;(active)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="38">item&nbsp;status&nbsp;=&nbsp;4&nbsp;(active)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;3&nbsp;(permanent)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="39">item&nbsp;status != 7 (store pick permanent)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="40">item&nbsp;status != 7 (store pick permanent)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="41">item&nbsp;status != 7 (store pick permanent)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="42">item&nbsp;status != 7 (store pick permanent)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="43">item&nbsp;status != 7 (store pick permanent)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="44">item&nbsp;status != 7 (store pick permanent)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="45">item&nbsp;status =&nbsp;NULL&nbsp;or&nbsp;invalid&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;3&nbsp;(permanent)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="46">item&nbsp;status =&nbsp;NULL&nbsp;or&nbsp;invalid&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;3&nbsp;(permanent)&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="47">item&nbsp;status =&nbsp;1 (Work in progress)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;= Null or invalid&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="48">item&nbsp;status =&nbsp;1 (Work in progress)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;= Null or invalid&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="49">item&nbsp;status&nbsp;=&nbsp;Null or invalid&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;Null or invalid&nbsp;=&gt;&nbsp;[DO&nbsp;NOT&nbsp;UPDATE]</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+       <li class="category displayed active"> 
+        <div class="category-heading"> 
+         <span class="category-name">validatePUTAssortmentItems_Status2_TC030</span> 
+         <span class="category-status right"> <span class="label pass">6</span> </span> 
+        </div> 
+        <div class="category-content hide"> 
+         <div class="category-status-counts"> 
+          <span class="label green accent-4 white-text">Passed: 6</span> 
+         </div> 
+         <div class="category-tests"> 
+          <table class="bordered table-results"> 
+           <thead> 
+            <tr>  
+             <th>Test Event</th> 
+             <th>Test Log</th> 
+            </tr> 
+           </thead> 
+           <tbody> 
+            <tr>  
+             <td class="linked" test-id="50">item&nbsp;status&nbsp;in&nbsp;the&nbsp;request&nbsp;=&nbsp;1&nbsp;(active)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;AND&nbsp;current&nbsp;item&nbsp;status&nbsp;in&nbsp;DB&nbsp;=&nbsp;4&nbsp;(active)&nbsp;=&gt;&nbsp;[SET&nbsp;item&nbsp;status&nbsp;=&nbsp;2&nbsp;(Setup&nbsp;In&nbsp;Progress)]</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="51">item&nbsp;status&nbsp;in&nbsp;the&nbsp;request&nbsp;=&nbsp;2&nbsp;(active)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;AND&nbsp;current&nbsp;item&nbsp;status&nbsp;in&nbsp;DB&nbsp;=&nbsp;4&nbsp;(active)&nbsp;=&gt;&nbsp;[SET&nbsp;item&nbsp;status&nbsp;=&nbsp;2&nbsp;(Setup&nbsp;In&nbsp;Progress)]</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="52">item&nbsp;status&nbsp;in&nbsp;the&nbsp;request&nbsp;=&nbsp;3&nbsp;(active)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;AND&nbsp;current&nbsp;item&nbsp;status&nbsp;in&nbsp;DB&nbsp;=&nbsp;4&nbsp;(active)&nbsp;=&gt;&nbsp;[SET&nbsp;item&nbsp;status&nbsp;=&nbsp;2&nbsp;(Setup&nbsp;In&nbsp;Progress)]</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="53">item&nbsp;status&nbsp;in&nbsp;the&nbsp;request&nbsp;=&nbsp;5&nbsp;(active)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;AND&nbsp;current&nbsp;item&nbsp;status&nbsp;in&nbsp;DB&nbsp;=&nbsp;4&nbsp;(active)&nbsp;=&gt;&nbsp;[SET&nbsp;item&nbsp;status&nbsp;=&nbsp;2&nbsp;(Setup&nbsp;In&nbsp;Progress)]</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="54">item&nbsp;status&nbsp;in&nbsp;the&nbsp;request&nbsp;=&nbsp;6&nbsp;(active)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;AND&nbsp;current&nbsp;item&nbsp;status&nbsp;in&nbsp;DB&nbsp;=&nbsp;4&nbsp;(active)&nbsp;=&gt;&nbsp;[SET&nbsp;item&nbsp;status&nbsp;=&nbsp;2&nbsp;(Setup&nbsp;In&nbsp;Progress)]</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+            <tr>  
+             <td class="linked" test-id="55">item&nbsp;status&nbsp;in&nbsp;the&nbsp;request&nbsp;=&nbsp;7&nbsp;(active)&nbsp;+&nbsp;store&nbsp;pick&nbsp;status&nbsp;=&nbsp;2&nbsp;(yes&nbsp;temp)&nbsp;AND&nbsp;current&nbsp;item&nbsp;status&nbsp;in&nbsp;DB&nbsp;=&nbsp;4&nbsp;(active)&nbsp;=&gt;&nbsp;[SET&nbsp;item&nbsp;status&nbsp;=&nbsp;2&nbsp;(Setup&nbsp;In&nbsp;Progress)]</td> 
+             <td><span class="test-status pass">pass</span></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+         </div> 
+        </div> </li> 
+      </ul> 
+     </div> 
+    </div> 
+    <div class="subview-right left"> 
+     <div class="view-summary"> 
+      <h5 class="category-name"></h5> 
+     </div> 
+    </div>
+   </div>
+   <!-- category view -->
+   <!-- exception view -->
+   <div id="dashboard-view" class="view hide"> 
+    <div class="card-panel transparent np-v"> 
+     <h5>Dashboard</h5> 
+     <div class="row"> 
+      <div class="col s2"> 
+       <div class="card-panel r">
+         Tests 
+        <div class="panel-lead">
+         55
+        </div> 
+       </div> 
+      </div>  
+      <div class="col s2"> 
+       <div class="card-panel r">
+         Start 
+        <div class="panel-lead">
+         Jun 3, 2022 03:14:35 PM
+        </div> 
+       </div> 
+      </div> 
+      <div class="col s2"> 
+       <div class="card-panel r">
+         End 
+        <div class="panel-lead">
+         Jun 3, 2022 04:43:53 PM
+        </div> 
+       </div> 
+      </div> 
+      <div class="col s2"> 
+       <div class="card-panel r">
+         Time Taken 
+        <div class="panel-lead">
+         1h 29m 17s+992ms
+        </div> 
+       </div> 
+      </div> 
+      <div class="col s6"> 
+       <div class="card-panel dashboard-categories"> 
+        <span class="right label cyan white-text">Categories</span>
+        <p>&nbsp;</p> 
+        <table> 
+         <tbody>
+          <tr> 
+           <th>Name</th> 
+           <th>Passed</th> 
+           <th>Failed</th> 
+           <th>Others</th> 
+           <th>Passed %</th> 
+          </tr> 
+          <tr> 
+           <td>validateGetAssortmentItems_filterByFC_TC003</td> 
+           <td>0</td> 
+           <td>3</td> 
+           <td>0</td> 
+           <td> 0% </td> 
+          </tr> 
+          <tr> 
+           <td>validateGetAssortmentItems_filterByFC_BlankSpaces_TC004</td> 
+           <td>0</td> 
+           <td>3</td> 
+           <td>0</td> 
+           <td> 0% </td> 
+          </tr> 
+          <tr> 
+           <td>validateGetAssortmentItems_filterByFC_InvalidInputData_TC005</td> 
+           <td>5</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td> 100% </td> 
+          </tr> 
+          <tr> 
+           <td>validateGetAmtItems_filterByUPC13_INVALIDA_INPUTDATA_TC007</td> 
+           <td>5</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td> 100% </td> 
+          </tr> 
+          <tr> 
+           <td>validateGetAssortmentItems_filterByUPC13_BlankSpaces_TC008</td> 
+           <td>0</td> 
+           <td>3</td> 
+           <td>0</td> 
+           <td> 0% </td> 
+          </tr> 
+          <tr> 
+           <td>validateGetAssortmentItems_filterByUPC13andFC_TC009</td> 
+           <td>4</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td> 100% </td> 
+          </tr> 
+          <tr> 
+           <td>validateGetAmtItems_pageable_TC021</td> 
+           <td>0</td> 
+           <td>3</td> 
+           <td>0</td> 
+           <td> 0% </td> 
+          </tr> 
+          <tr> 
+           <td>validateGetAmtItems_pageSize_TC022</td> 
+           <td>1</td> 
+           <td>4</td> 
+           <td>0</td> 
+           <td> 20% </td> 
+          </tr> 
+          <tr> 
+           <td>validateGetAmtItems_pageOffset_TC023</td> 
+           <td>0</td> 
+           <td>5</td> 
+           <td>0</td> 
+           <td> 0% </td> 
+          </tr> 
+          <tr> 
+           <td>validatePUTAssortmentItems_InvalidUpdate_TC028</td> 
+           <td>13</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td> 100% </td> 
+          </tr> 
+          <tr> 
+           <td>validatePUTAssortmentItems_Status2_TC030</td> 
+           <td>6</td> 
+           <td>0</td> 
+           <td>0</td> 
+           <td> 100% </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+      </div> 
+     </div> 
+    </div>
+   </div>
+   <!-- dashboard view -->
+   <!-- testrunner-logs view --> 
+  </div> 
+  <!-- container --> 
+  <script>			var statusGroup = {				passParent: 34,				failParent: 21,				fatalParent: 0,				errorParent: 0,				warningParent: 0,				skipParent: 0,				exceptionsParent: 21,								passChild: 0,				failChild: 0,				fatalChild: 0,				errorChild: 0,				warningChild: 0,				skipChild: 0,				infoChild: 0,				exceptionsChild: 0,								passGrandChild: 0,				failGrandChild: 0,				fatalGrandChild: 0,				errorGrandChild: 0,				warningGrandChild: 0,				skipGrandChild: 0,				infoGrandChild: 0,				exceptionsGrandChild: 0,			};		</script> 
+  <script src="https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js" type="text/javascript"></script> 
+  <script type="text/javascript">	 			$(".brand-logo").html("yaAPIta");$(".label").css("display","none") 		</script>  
+  <div id="snackbar"></div>
+  <script type="text/javascript">
+function displayQuote() {
+    var x = document.getElementById("snackbar")
+ var myArray = ['If development is an art, testing is BLACK MAGIC', 'Testers - we make developers cry', 'Every tester has the heart of a developer … in a jar on their desk', 'Deleting cookies all the time will not solve the problem', 'We have a vast untapped pool of QA Engineers…. OUR CLIENTS!', 'Testers don’t like to break things; they like to dispel the illusion that things work.', 'Right or wrong, it’s very pleasant to break something from time to time.', 'Where is the ‘any’ key?', 'f u cn rd ths, u cn gt a gd jb n sftwr tstng.', 'To an optimist, the glass is half full. To a pessimist, the glass is half empty. To a good tester, the glass is twice as big as it needs to be', 'Irreproducible bugs become highly reproducible right after delivery to the customer.', 'All code is guilty until proven innocent.', 'Software and cathedrals are much the same: first we build them, then we pray.', 'There are 10 types of people in this world: those who understand binary and those who don’t.', 'The computer was born to solve problems that did not exist before.', 'I think it’s a new feature. Don’t tell anyone it was an accident.', 'Walking on water and developing software from a specification are easy if both are frozen.', 'I don’t care if it works on your machine! We are not shipping your machine!', 'Don’t worry if it doesn’t work right.  If everything did, you’d be out of a job.', 'Without requirements or design, programming is the art of adding bugs to an empty text file.', 'If you automate a mess, you get an automated mess.', '“Don’t document the problem, fix it.', 'One man’s crappy software is another man’s full time job.', 'A good programmer is someone who always looks both ways before crossing a one-way street.', 'Blame doesn’t fix bugs.', 'Why do we never have time to do it right, but always have time to do it over?', 'First do it, then do it right, then do it better.', 'Engineers call them edge cases. I call them: what our users do.', 'Bug report: ‘Everything is broken. Steps to reproduce: do anything. Expected result: it should work’.', 'the problem with "quick and dirty" is that "dirty" remains long after "quick" has been forgotten.', 'code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.', 'The only certainties in life are death, taxes and bugs in code.', 'Before software can be reusable it first has to be usable.', 'Software undergoes beta testing shortly before it’s released. Beta is Latin for "still doesn’t work"', 'There are only two kinds of programming languages: those people always bitch about and those nobody uses.', 'In order to understand recursion, one must first understand recursion.', 'Don’t treat a semi colon as an end of line but rather as a possibility of a new beginning.', 'VI has 2 modes. One that beeps at you, and another that ruins everything.', 'Deleted code is debugged code.', 'The best thing about a boolean is even if you are wrong, you are only off by a bit.', 'In a world without walls…..who needs Windows?', 'All software boils down to pure binary. It works or it doesn’t.', 'Given enough time, I can meet any software deadline.', 'To err is human but to really foul things up you need a computer.', 'It’s not a bug – it’s an undocumented feature.', 'Cheap, fast, reliable: Pick 2', 'My programs never have bugs, they just develop random features.', 'Not only have we not produced artificial intelligence, we haven’t even produced artificial stupidity!', 'There are two types of people in this world: those who understand recursion and those who don’t understand that there are two types of people in this world.', 'A programmer’s wife tells him: go to store. pick up a loaf of bread. If they have eggs, get a dozen. The programmer returns with 12 loaves.', 'Bad programmers have all the answers. Good testers have all the questions.', '"Our job is to tell you your baby is ugly!" – Software Testers', 'One bad programmer can easily create two new jobs a year.', '3 Errors walk into a bar. The barman says, "normally I’d Throw you all out, but tonight I’ll make an Exception."', 'If you think it’s expensive to hire a professional, wait until you hire an amateur.', 'The proper use of comments is to compensate for our failure to express ourself in code.'];
+    var rand = myArray[Math.floor(Math.random() * myArray.length)];
+    x.className = "show";
+    x.innerHTML = rand;    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 7000);
+}function copyJSONToClipboard(myInput) {
+  var copyText = document.getElementById(myInput);
+  if (!navigator.clipboard) {
+    fallbackCopyTextToClipboard(copyText.textContent.trim());
+    return;
+  }
+  navigator.clipboard.writeText(copyText.textContent).then(function() {
+    console.log('Async: Copying to clipboard was successful!');
+  }, function(err) {
+    console.error('Async: Could not copy text: ', err);
+  });
+}
+function fallbackCopyTextToClipboard(text) {
+  var textArea = document.createElement("textarea");
+  textArea.value = text;
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Fallback: Copying text command was ' + msg);
+  } catch (err) {
+    console.error('Fallback: Oops, unable to copy', err);
+  }
+  document.body.removeChild(textArea);
+}
+</script>
+ </body>
+</html>
